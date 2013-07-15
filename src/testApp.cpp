@@ -11,7 +11,7 @@ void testApp::setup(){
     titleY = 40;
     
     company = "";
-
+    
 }
 
 //--------------------------------------------------------------
@@ -43,6 +43,22 @@ void testApp::keyPressed(int key){
     }
     
 }
+
+//---private----------------------------------------------------
+
+void testApp::loadData(string s){
+    string api_key = "rwdd2u4dk4gu8ppwb6e8xgxj";
+    string url = "http://api.crunchbase.com/v/1/company/comcast.js?api_key="+api_key;
+    
+	bool gotJson = json.open(url);
+	if ( gotJson )
+    {
+        cout << "Got data: \n: "+ofToString(json["name"]);
+    } else {
+        cout  << "Failed to parse JSON\n" << endl;
+	}
+}
+
 
 //--------------------------------------------------------------
 void testApp::keyReleased(int key){

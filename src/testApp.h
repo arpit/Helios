@@ -1,6 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
+#include "ofxJSONElement.h"
 
 class testApp : public ofBaseApp{
 	public:
@@ -18,10 +19,19 @@ class testApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
     
+    
         ofTrueTypeFont	verdana30;
         string company;
     
+    
+        ofxJSONElement json;
+        int nResults;
+        float size;
+        
         int titleX;
         int titleY;
+    
+    private:
+        void loadData(string s);
     
 };
