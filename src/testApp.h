@@ -2,6 +2,7 @@
 
 #include "ofMain.h"
 #include "ofxJSONElement.h"
+#include "Company.h"
 
 class testApp : public ofBaseApp{
 	public:
@@ -24,14 +25,16 @@ class testApp : public ofBaseApp{
         string company;
     
     
-        ofxJSONElement json;
         int nResults;
         float size;
         
         int titleX;
         int titleY;
     
+        
+    
     private:
         void loadData(string s);
+        vector<heCompany> companies;
     
 };
