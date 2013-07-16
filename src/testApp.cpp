@@ -7,15 +7,27 @@ static const int red = 0xE74C3C;
 void testApp::setup(){
     
     ofSetVerticalSync(true);
-    ofBackground(255,255,255);
+    //ofBackground(255,255,255);
     verdana30.loadFont("verdana.ttf", 12, true, true);
 	verdana30.setLineHeight(34.0f);
 	verdana30.setLetterSpacing(1.035);
     
     titleX = 20;
     titleY = 40;
+    val = 100;
+    
     
     company = "";
+    
+    
+   
+    
+    cam.setNearClip(0.1);
+    cam.setFarClip(100);
+    
+    cam.setPosition(ofVec3f(1,0,5));
+    
+    ofEnableAlphaBlending();
 }
 
 //--------------------------------------------------------------
@@ -28,23 +40,35 @@ void testApp::update(){
 //--------------------------------------------------------------
 void testApp::draw(){
     
-    ofRectangle rect = verdana30.getStringBoundingBox(company, 0,0);
-    ofSetColor(ofColor::black);
-    ofRect(titleX+rect.x-5, titleY+rect.y-5, rect.width+10, rect.height+10);
-    
-    ofSetColor(ofColor::white);
-    verdana30.drawString(company, titleX, titleY);
     
     
-    if(notifyString.size() > 0){
-        ofRectangle rect2 = verdana30.getStringBoundingBox(notifyString, 0,0);
-        ofSetHexColor(0xEFF3F3);
-        ofRect(0, ofGetWindowHeight()-25,ofGetWidth(), 25);
-        ofSetColor(ofColor::black);
-        verdana30.drawString(notifyString, 10,  ofGetWindowHeight()-6);
-    }
     
     
+    
+//    cam.setPosition(ofVec3f(1,0,5.0));
+//    cam.begin();
+//   
+//    cam.enableMouseInput();
+//    
+//    glPushMatrix();
+//    
+//    ofSetColor(255, 255, 255);
+//    ofNoFill();
+//    ofSphere(0, 0, 0, 1);
+//
+//        for(int i=0; i<companies.size(); i++){
+//            companies[i].drawSphere(red);
+//        }
+//    
+//    
+//    
+//    glPopMatrix();
+//    cam.end();
+    
+    
+    
+
+
     
     ofSetHexColor(0xDCDCDC);
     
@@ -54,6 +78,17 @@ void testApp::draw(){
         ofSetCircleResolution(100);
         companies[i].draw(red);
     }
+    
+    ofDrawBitmapStringHighlight(company, ofPoint(titleX, titleY));
+    
+    ofSetHexColor(0xEFF3F3);
+    
+    if(notifyString.size() > 0){
+        ofDrawBitmapStringHighlight(notifyString, ofPoint(0, ofGetWindowHeight()-20), ofColor(236, 240, 241), ofColor::black);
+    }
+
+    
+    
 }
 
 //--------------------------------------------------------------
@@ -137,6 +172,8 @@ void testApp::loadData(string s){
         }
         
         
+        
+        
         heCompany c;
         
         c.name = stripQuotes(nme);
@@ -146,13 +183,21 @@ void testApp::loadData(string s){
         
         c.dollarValue = convertToNumber(c.money_raised);
         c.index = companies.size();
-        c.startAt((c.index+1)*200, 200);
+        
+        
+        //c.startAt((c.index+1)*200, 200);
+        
+        c.startAt(max( (float)100.0, ofRandom(ofGetWindowWidth()-200)), max((float)300, ofRandom(ofGetWindowHeight()-200)));
+        
+        
+        //c.startAt(0, 0);
         
         companies.push_back(c);
         setRadiiBasedOnInvestment();
         
     } else {
-        cout  << "Failed to parse JSON\n" << endl;
+        cout  << "Failed to parse JSON\n" << json.getRawString() << endl;
+        notify("Failed to parse JSON"+company);
 	}
 }
 
@@ -166,6 +211,8 @@ void testApp::setRadiiBasedOnInvestment(){
     
     double smallest=convertToNumber("\"$10B\"");
     double largest = 0;
+    
+    int maxRad = max((float)120, (float)400/companies.size());
     
     for(int i=0; i< companies.size(); i++){
         double value = companies[i].dollarValue;
@@ -186,9 +233,7 @@ void testApp::setRadiiBasedOnInvestment(){
     }
     else{
         cout << "Largest: " << largest << ", smallest: " << smallest << "\n";
-        //mult = 400 * 2 / (largest - smallest);
-        
-        mult = 100/largest;
+        mult = maxRad/largest;
     }
     
     
@@ -196,7 +241,7 @@ void testApp::setRadiiBasedOnInvestment(){
     for(int i=0; i< companies.size(); i++){
         
         if(mult == -1){
-            companies[i].radius = 100;
+            companies[i].radius = maxRad;
         }
         else{
             companies[i].radius = max(10, (int)(companies[i].dollarValue * mult));

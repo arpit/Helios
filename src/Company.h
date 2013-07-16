@@ -33,6 +33,7 @@ public:
     void startAt(int x, int y);
     void setRadius(int r);
     void draw(int color);
+    void drawSphere(int color);
 };
 
 

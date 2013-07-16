@@ -13,6 +13,8 @@ class testApp : public ofBaseApp{
 		void setup();
 		void update();
 		void draw();
+    
+    int val;
 		
 		void keyPressed(int key);
 		void keyReleased(int key);
@@ -40,6 +42,7 @@ class testApp : public ofBaseApp{
     private:
     
         string notifyString;
+        ofEasyCam cam;
     
         void loadData(string s);
         vector<heCompany> companies;
