@@ -19,6 +19,20 @@
                ReferencedContainer = "container:emptyExample.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
+               BuildableName = "StartupsViz.app"
+               BlueprintName = "StartupsViz"
+               ReferencedContainer = "container:StartupsViz.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction

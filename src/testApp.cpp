@@ -1,8 +1,4 @@
 #include "testApp.h"
-#include <string.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <algorithm>
 
 //--------------------------------------------------------------
 
@@ -32,7 +28,6 @@ void testApp::update(){
 //--------------------------------------------------------------
 void testApp::draw(){
     
-    
     ofRectangle rect = verdana30.getStringBoundingBox(company, 0,0);
     ofSetColor(ofColor::black);
     ofRect(titleX+rect.x-5, titleY+rect.y-5, rect.width+10, rect.height+10);
@@ -40,9 +35,21 @@ void testApp::draw(){
     ofSetColor(ofColor::white);
     verdana30.drawString(company, titleX, titleY);
     
+    
+    if(notifyString.size() > 0){
+        ofRectangle rect2 = verdana30.getStringBoundingBox(notifyString, 0,0);
+        ofSetHexColor(0xEFF3F3);
+        ofRect(0, ofGetWindowHeight()-25,ofGetWidth(), 25);
+        ofSetColor(ofColor::black);
+        verdana30.drawString(notifyString, 10,  ofGetWindowHeight()-6);
+    }
+    
+    
+    
     ofSetHexColor(0xDCDCDC);
     
     ofEnableSmoothing();
+    
     for(int i=0; i<companies.size(); i++){
         ofSetCircleResolution(100);
         companies[i].draw(red);
@@ -117,8 +124,16 @@ void testApp::loadData(string s){
     {
         
         string nme = ofToString(json["name"]);
-        if (strncmp(nme.c_str(), "\"null\"", 10)) {
+        cout << nme.c_str() << "\n " << nme.empty();
+        
+        string null = "null";
+        
+        if (nme.find(null, 0) != string::npos) {
+            notify("Could not find company: "+company);
             return;
+        }
+        else{
+            notifyString = "";
         }
         
         
@@ -139,6 +154,11 @@ void testApp::loadData(string s){
     } else {
         cout  << "Failed to parse JSON\n" << endl;
 	}
+}
+
+
+void testApp::notify(string s){
+    notifyString  = s;
 }
 
 

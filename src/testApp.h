@@ -3,6 +3,10 @@
 #include "ofMain.h"
 #include "ofxJSONElement.h"
 #include "Company.h"
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <algorithm>
 
 class testApp : public ofBaseApp{
 	public:
@@ -34,8 +38,12 @@ class testApp : public ofBaseApp{
         double convertToNumber(string m);
     
     private:
+    
+        string notifyString;
+    
         void loadData(string s);
         vector<heCompany> companies;
         void setRadiiBasedOnInvestment();
         string stripQuotes(string s);
+        void notify(string s);
 };
