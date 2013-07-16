@@ -22,8 +22,17 @@ public:
     heCompany();
     
     int index;
+    int nowX;
+    int nowY;
     
-    void draw();
+    int radius;
+    int nowRadius = 0;
+    
+    double dollarValue;
+    
+    void startAt(int x, int y);
+    void setRadius(int r);
+    void draw(int color);
 };
 
 

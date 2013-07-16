@@ -1,12 +1,18 @@
 #include "testApp.h"
 #include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <algorithm>
 
 //--------------------------------------------------------------
+
+static const int red = 0xE74C3C;
+
 void testApp::setup(){
     
     ofSetVerticalSync(true);
-    
-    verdana30.loadFont("verdana.ttf", 30, true, true);
+    ofBackground(255,255,255);
+    verdana30.loadFont("verdana.ttf", 12, true, true);
 	verdana30.setLineHeight(34.0f);
 	verdana30.setLetterSpacing(1.035);
     
@@ -14,7 +20,6 @@ void testApp::setup(){
     titleY = 40;
     
     company = "";
-    
 }
 
 //--------------------------------------------------------------
@@ -26,7 +31,8 @@ void testApp::update(){
 
 //--------------------------------------------------------------
 void testApp::draw(){
-   
+    
+    
     ofRectangle rect = verdana30.getStringBoundingBox(company, 0,0);
     ofSetColor(ofColor::black);
     ofRect(titleX+rect.x-5, titleY+rect.y-5, rect.width+10, rect.height+10);
@@ -39,7 +45,7 @@ void testApp::draw(){
     ofEnableSmoothing();
     for(int i=0; i<companies.size(); i++){
         ofSetCircleResolution(100);
-        companies[i].draw();
+        companies[i].draw(red);
     }
 }
 
@@ -59,7 +65,37 @@ void testApp::keyPressed(int key){
 
 //---private----------------------------------------------------
 
-string stripQuotes(string s){
+double testApp::convertToNumber(string in){
+    string m = stripQuotes(in);
+    const char* DOLLAR = "$";
+    const char first_letter = m.at(0);
+    if(strncmp(&first_letter, DOLLAR, 1)==0){
+        m = m.substr(1, m.length());
+    }
+    
+    const char last_letter = m.at(m.length()-1);
+    
+    const char* BILLION = "B";
+    const char* MILLION = "M";
+    
+    double mult = 1;
+    
+    if(strncmp(&last_letter, BILLION, 1)==0){
+        m = m.substr(0, m.length()-1);
+        mult = 1000000000;
+    }
+   
+    
+    
+    if(strncmp(&last_letter, MILLION, 1)==0){
+        m = m.substr(0, m.length()-1);
+        mult = 1000000;
+    }
+    
+    return ((double)atof(m.c_str()) * mult);
+}
+
+string testApp::stripQuotes(string s){
     
     char quote = '"';
     
@@ -76,21 +112,78 @@ void testApp::loadData(string s){
     ofxJSONElement json;
 	bool gotJson = json.open(url);
     
-    string test = ofToString(json["dfsfsdfsdfs"]);
     
 	if ( gotJson )
     {
-        cout << "Got data: \n: " << test;
+        
+        string nme = ofToString(json["name"]);
+        if (strncmp(nme.c_str(), "\"null\"", 10)) {
+            return;
+        }
+        
+        
         heCompany c;
         
-        c.name = stripQuotes(ofToString(json["name"]));
+        c.name = stripQuotes(nme);
         c.money_raised = ofToString(json["total_money_raised"]);
+        
+        
+        
+        c.dollarValue = convertToNumber(c.money_raised);
         c.index = companies.size();
+        c.startAt((c.index+1)*200, 200);
+        
         companies.push_back(c);
+        setRadiiBasedOnInvestment();
         
     } else {
         cout  << "Failed to parse JSON\n" << endl;
 	}
+}
+
+
+void testApp::setRadiiBasedOnInvestment(){
+    
+    double smallest=convertToNumber("\"$10B\"");
+    double largest = 0;
+    
+    for(int i=0; i< companies.size(); i++){
+        double value = companies[i].dollarValue;
+        
+        if(value > largest){
+            largest = value;
+        }
+        if(value < smallest){
+            smallest = value;
+        }
+        
+    }
+    
+    double mult;
+    
+    if(smallest == largest){
+        mult = -1;
+    }
+    else{
+        cout << "Largest: " << largest << ", smallest: " << smallest << "\n";
+        //mult = 400 * 2 / (largest - smallest);
+        
+        mult = 100/largest;
+    }
+    
+    
+    
+    for(int i=0; i< companies.size(); i++){
+        
+        if(mult == -1){
+            companies[i].radius = 100;
+        }
+        else{
+            companies[i].radius = max(10, (int)(companies[i].dollarValue * mult));
+        }
+        
+    }
+    
 }
 
 

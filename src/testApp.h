@@ -31,10 +31,11 @@ class testApp : public ofBaseApp{
         int titleX;
         int titleY;
     
-        
+        double convertToNumber(string m);
     
     private:
         void loadData(string s);
         vector<heCompany> companies;
-    
+        void setRadiiBasedOnInvestment();
+        string stripQuotes(string s);
 };
