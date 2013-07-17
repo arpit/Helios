@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D906D821797366100D4D59B /* CompanyEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1D906D801797366100D4D59B /* CompanyEvent.cpp */; };
 		1DBFC9E8179486880035F4CF /* json_reader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1DBFC9DF179486880035F4CF /* json_reader.cpp */; };
 		1DBFC9E9179486880035F4CF /* json_value.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1DBFC9E0179486880035F4CF /* json_value.cpp */; };
 		1DBFC9EA179486880035F4CF /* json_writer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1DBFC9E2179486880035F4CF /* json_writer.cpp */; };
@@ -65,6 +66,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1D906D801797366100D4D59B /* CompanyEvent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CompanyEvent.cpp; sourceTree = "<group>"; };
+		1D906D811797366100D4D59B /* CompanyEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompanyEvent.h; sourceTree = "<group>"; };
 		1DBFC9D1179486880035F4CF /* autolink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = autolink.h; sourceTree = "<group>"; };
 		1DBFC9D2179486880035F4CF /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
 		1DBFC9D3179486880035F4CF /* features.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = features.h; sourceTree = "<group>"; };
@@ -292,6 +295,8 @@
 				E4B69E1F0A3A1BDC003C02F2 /* testApp.h */,
 				1DBFC9ED17948EFD0035F4CF /* Company.cpp */,
 				1DBFC9EE17948EFD0035F4CF /* Company.h */,
+				1D906D801797366100D4D59B /* CompanyEvent.cpp */,
+				1D906D811797366100D4D59B /* CompanyEvent.h */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -396,6 +401,7 @@
 				1DBFC9E9179486880035F4CF /* json_value.cpp in Sources */,
 				1DBFC9EA179486880035F4CF /* json_writer.cpp in Sources */,
 				1DBFC9EF17948EFD0035F4CF /* Company.cpp in Sources */,
+				1D906D821797366100D4D59B /* CompanyEvent.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

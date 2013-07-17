@@ -11,10 +11,14 @@
 
 #include <iostream>
 #include "ofMain.h"
+#include "CompanyEvent.h"
 
 class heCompany{
     
 public:
+    
+    static ofEvent<heCompanyEvent> clickedInsideGlobal;
+    
     string name;
     string money_raised;
     ofTrueTypeFont	verdana30;
@@ -34,6 +38,13 @@ public:
     void setRadius(int r);
     void draw(int color);
     void drawSphere(int color);
+    
+    void mouseMoved(ofMouseEventArgs & args);
+    void mouseDragged(ofMouseEventArgs & args);
+    void mousePressed(ofMouseEventArgs & args);
+    void mouseReleased(ofMouseEventArgs & args);
+    
+    bool inside(float _x, float _y );
 };
 
 

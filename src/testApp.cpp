@@ -19,7 +19,7 @@ void testApp::setup(){
     
     company = "";
     
-    
+    ofAddListener(heCompany::clickedInsideGlobal , this, &testApp::onClickInsideCompanyCircle);
    
     
     cam.setNearClip(0.1);
@@ -137,6 +137,7 @@ double testApp::convertToNumber(string in){
     return ((double)atof(m.c_str()) * mult);
 }
 
+//---------------------------------------------------------------
 string testApp::stripQuotes(string s){
     
     char quote = '"';
@@ -147,6 +148,8 @@ string testApp::stripQuotes(string s){
     return s;
     
 }
+
+
 
 void testApp::loadData(string s){
     string api_key = "rwdd2u4dk4gu8ppwb6e8xgxj";
@@ -187,12 +190,13 @@ void testApp::loadData(string s){
         
         //c.startAt((c.index+1)*200, 200);
         
-        c.startAt(max( (float)100.0, ofRandom(ofGetWindowWidth()-200)), max((float)300, ofRandom(ofGetWindowHeight()-200)));
+        
         
         
         //c.startAt(0, 0);
         
         companies.push_back(c);
+        companies[companies.size()-1].startAt(max( (float)100.0, ofRandom(ofGetWindowWidth()-200)), max((float)300, ofRandom(ofGetWindowHeight()-200)));
         setRadiiBasedOnInvestment();
         
     } else {
@@ -249,6 +253,12 @@ void testApp::setRadiiBasedOnInvestment(){
         
     }
     
+}
+
+//--------------------------------------------------------------
+
+void testApp::onClickInsideCompanyCircle(heCompanyEvent & event){
+    cout << "Click " << event.company->name;
 }
 
 

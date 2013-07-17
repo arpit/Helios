@@ -14,6 +14,8 @@ class testApp : public ofBaseApp{
 		void update();
 		void draw();
     
+        ofEvent<ofVec2f> clickedInside;
+    
     int val;
 		
 		void keyPressed(int key);
@@ -49,4 +51,8 @@ class testApp : public ofBaseApp{
         void setRadiiBasedOnInvestment();
         string stripQuotes(string s);
         void notify(string s);
+    
+        void onClickInsideCompanyCircle(heCompanyEvent & company);
+    
+        
 };
