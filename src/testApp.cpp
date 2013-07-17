@@ -19,7 +19,7 @@ void testApp::setup(){
     
     company = "";
     
-    ofAddListener(heCompany::clickedInsideGlobal , this, &testApp::onClickInsideCompanyCircle);
+    
    
     
     cam.setNearClip(0.1);
@@ -28,6 +28,9 @@ void testApp::setup(){
     cam.setPosition(ofVec3f(1,0,5));
     
     ofEnableAlphaBlending();
+    
+    loadData("facebook");
+    loadData("twitter");
 }
 
 //--------------------------------------------------------------
@@ -76,7 +79,7 @@ void testApp::draw(){
     
     for(int i=0; i<companies.size(); i++){
         ofSetCircleResolution(100);
-        companies[i].draw(red);
+        companies[i]->draw(red);
     }
     
     ofDrawBitmapStringHighlight(company, ofPoint(titleX, titleY));
@@ -162,7 +165,6 @@ void testApp::loadData(string s){
     {
         
         string nme = ofToString(json["name"]);
-        cout << nme.c_str() << "\n " << nme.empty();
         
         string null = "null";
         
@@ -177,15 +179,16 @@ void testApp::loadData(string s){
         
         
         
-        heCompany c;
-        
-        c.name = stripQuotes(nme);
-        c.money_raised = ofToString(json["total_money_raised"]);
+        heCompany* c = new heCompany;
         
         
+        c->name = stripQuotes(nme);
+        c->money_raised = ofToString(json["total_money_raised"]);
         
-        c.dollarValue = convertToNumber(c.money_raised);
-        c.index = companies.size();
+        
+        
+        c->dollarValue = convertToNumber(c->money_raised);
+        c->index = companies.size();
         
         
         //c.startAt((c.index+1)*200, 200);
@@ -196,8 +199,15 @@ void testApp::loadData(string s){
         //c.startAt(0, 0);
         
         companies.push_back(c);
-        companies[companies.size()-1].startAt(max( (float)100.0, ofRandom(ofGetWindowWidth()-200)), max((float)300, ofRandom(ofGetWindowHeight()-200)));
+        heCompany* hec = companies[companies.size()-1];
+        
+        hec->startAt(max( (float)100.0, ofRandom(ofGetWindowWidth()-200)), max((float)300, ofRandom(ofGetWindowHeight()-200)));
+        
+        ofAddListener(hec->clickedInside , this, &testApp::onClickInsideCompanyCircle);
         setRadiiBasedOnInvestment();
+        
+        
+        
         
     } else {
         cout  << "Failed to parse JSON\n" << json.getRawString() << endl;
@@ -219,7 +229,7 @@ void testApp::setRadiiBasedOnInvestment(){
     int maxRad = max((float)120, (float)400/companies.size());
     
     for(int i=0; i< companies.size(); i++){
-        double value = companies[i].dollarValue;
+        double value = companies[i]->dollarValue;
         
         if(value > largest){
             largest = value;
@@ -245,10 +255,10 @@ void testApp::setRadiiBasedOnInvestment(){
     for(int i=0; i< companies.size(); i++){
         
         if(mult == -1){
-            companies[i].radius = maxRad;
+            companies[i]->radius = maxRad;
         }
         else{
-            companies[i].radius = max(10, (int)(companies[i].dollarValue * mult));
+            companies[i]->radius = max(10, (int)(companies[i]->dollarValue * mult));
         }
         
     }
@@ -259,6 +269,17 @@ void testApp::setRadiiBasedOnInvestment(){
 
 void testApp::onClickInsideCompanyCircle(heCompanyEvent & event){
     cout << "Click " << event.company->name;
+    for(int i=0; i<companies.size(); i++){
+        
+        if(strncmp(companies[i]->name.c_str(), event.company->name.c_str(), event.company->name.length())==0){
+            delete companies[i];
+            companies.erase(companies.begin()+i);
+            
+            cout << "Now showing: " << companies.size() << endl;
+            
+            break;
+        }
+    }
 }
 
 

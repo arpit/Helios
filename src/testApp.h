@@ -16,6 +16,7 @@ class testApp : public ofBaseApp{
     
         ofEvent<ofVec2f> clickedInside;
     
+    
     int val;
 		
 		void keyPressed(int key);
@@ -47,7 +48,7 @@ class testApp : public ofBaseApp{
         ofEasyCam cam;
     
         void loadData(string s);
-        vector<heCompany> companies;
+        vector<heCompany*> companies;
         void setRadiiBasedOnInvestment();
         string stripQuotes(string s);
         void notify(string s);

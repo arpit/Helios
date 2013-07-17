@@ -8,11 +8,15 @@
 
 #include "Company.h"
 
-// the static event, or any static variable, must be initialized outside of the class definition.
-ofEvent<heCompanyEvent> heCompany::clickedInsideGlobal = ofEvent<heCompanyEvent>();
 
 heCompany::heCompany(){
     verdana30.loadFont("verdana.ttf", 12, true, true);
+}
+
+
+heCompany::~heCompany(){
+    cout << "Goodbye world" << endl;
+    ofUnregisterMouseEvents(this);
 }
 
 void heCompany::startAt(int x, int y){
@@ -56,15 +60,15 @@ void heCompany::mouseMoved(ofMouseEventArgs & args){}
 void heCompany::mouseDragged(ofMouseEventArgs & args){}
 void heCompany::mousePressed(ofMouseEventArgs & args){}
 void heCompany::mouseReleased(ofMouseEventArgs & args){
+    
     if(inside(args.x, args.y)){
         ofVec2f mousePos = ofVec2f(args.x, args.y);
         heCompanyEvent event;
         event.company = this;
-        
-        ofNotifyEvent(clickedInsideGlobal, event, this);
+        ofNotifyEvent(clickedInside, event, this);
     }
 }
 
 bool heCompany::inside(float _x, float _y ){
-    return (ofVec2f(_x, _y).distance(ofVec2f(nowX, nowY)) < radius);
+    return (ofVec2f(_x, _y).distance(ofVec2f(nowX, nowY)) < nowRadius);
 }

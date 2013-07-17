@@ -17,13 +17,14 @@ class heCompany{
     
 public:
     
-    static ofEvent<heCompanyEvent> clickedInsideGlobal;
+    ofEvent<heCompanyEvent> clickedInside;
     
     string name;
     string money_raised;
     ofTrueTypeFont	verdana30;
     
     heCompany();
+    ~heCompany();
     
     int index;
     int nowX;
@@ -38,6 +39,7 @@ public:
     void setRadius(int r);
     void draw(int color);
     void drawSphere(int color);
+    void preDelete();
     
     void mouseMoved(ofMouseEventArgs & args);
     void mouseDragged(ofMouseEventArgs & args);
@@ -45,6 +47,7 @@ public:
     void mouseReleased(ofMouseEventArgs & args);
     
     bool inside(float _x, float _y );
+    
 };
 
 
