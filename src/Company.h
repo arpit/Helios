@@ -13,7 +13,7 @@
 #include "ofMain.h"
 #include "CompanyEvent.h"
 #include "Entity.h"
-
+#include "RSSItem.h"
 class heCompany : public Entity{
     
 public:
@@ -49,6 +49,9 @@ public:
     
     
     bool inside(float _x, float _y );
+   
+    vector<heRSSItem> newsItems;
+    
     
 };
 

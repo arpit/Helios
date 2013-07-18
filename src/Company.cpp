@@ -15,7 +15,6 @@ heCompany::heCompany():Entity(){
 
 
 heCompany::~heCompany(){
-    cout << "Goodbye world" << endl;
     ofUnregisterMouseEvents(this);
 }
 
