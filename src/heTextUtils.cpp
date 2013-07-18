@@ -17,7 +17,6 @@ string wrapString(string text, int width, ofxTrueTypeFontUC* font) {
     for(int i=0; i<words.size(); i++) {
         
         string wrd = words[i];
-        cout << wrd << endl;
         
         tempString += wrd + " ";
         int stringwidth = font->stringWidth(tempString);
