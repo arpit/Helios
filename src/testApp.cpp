@@ -8,8 +8,8 @@ void testApp::setup(){
     
     ofSetVerticalSync(true);
     //ofBackground(255,255,255);
-    verdana30.loadFont("verdana.ttf", 12, true, true);
-	verdana30.setLineHeight(34.0f);
+    verdana30.loadFont("verdana.ttf", 8, true, true);
+    verdana30.setLineHeight(18);
 	verdana30.setLetterSpacing(1.035);
     
     ofEnableSmoothing();
@@ -100,7 +100,7 @@ void testApp::draw(){
         ofDrawBitmapStringHighlight(notifyString, ofPoint(0, ofGetWindowHeight()-20), ofColor(236, 240, 241), ofColor::black);
     }
     
-    int nowTitleX = ofGetWindowWidth()- 600;
+    int nowTitleX = ofGetWindowWidth()- STORY_ITEM_WIDTH -20;
     int nowTitleY = 20;
     ofRectangle rect;
     
@@ -108,13 +108,20 @@ void testApp::draw(){
     
     if(true){
         for(int i=0; i<feedItems.size(); i++){
-            rect = verdana30.getStringBoundingBox(feedItems[i].title, 0, nowTitleY);
+            
             nowTitleY = rect.getBottom()+40;
-            //ofSetColor(ofColor::white);
-            //ofRect(rect);
+            
+            rect = verdana30.getStringBoundingBox(feedItems[i].title, nowTitleX, nowTitleY);
+            
             ofSetHexColor(0x000000);
-            //verdana30.drawString(feedItems[i].title, nowTitleX, nowTitleY);
-            ofDrawBitmapStringHighlight(feedItems[i].title, nowTitleX, nowTitleY);
+            rect.x = rect.x-10;
+            rect.width = 425;
+            rect.y -=5;
+            rect.height +=10;
+            
+            ofRect(rect);
+            ofSetColor(ofColor::white);
+            verdana30.drawString(feedItems[i].title, nowTitleX, nowTitleY);
         }
     }
     
@@ -214,7 +221,8 @@ void testApp::loadFeed(){
     if(gotJson){
         for(int i=0; i<json["items"].size(); i++)
         {
-            item.title = json["items"][i]["title"].asString();
+            item.title =  json["items"][i]["title"].asString();
+            item.title = wrapString(item.title, STORY_ITEM_WIDTH, &verdana30);
             item.desc = json["items"][i]["desc"].asString();
             item.startups = json["items"][i]["startups"].asString();
             
@@ -230,7 +238,9 @@ void testApp::loadFeed(){
 
 void testApp::loadData(string s){
     string api_key = "rwdd2u4dk4gu8ppwb6e8xgxj";
-    string url = "http://api.crunchbase.com/v/1/company/"+s+".js?api_key="+api_key;
+    //string url = "http://api.crunchbase.com/v/1/company/"+s+".js?api_key="+api_key;
+    
+    string url = "http://ec2-107-21-104-179.compute-1.amazonaws.com/v/1/company/"+s+".js?api_key="+api_key;
     ofxJSONElement json;
 	bool gotJson = json.open(url);
     

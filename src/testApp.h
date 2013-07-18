@@ -11,12 +11,15 @@
 #include <GLUT/glut.h>
 #include "RSSItem.h"
 #include "Entity.h"
-
+#include "heTextUtils.h"
+#include "ofxTrueTypeFontUC.h"
 
 class testApp : public ofBaseApp{
 	public:
 		
-        ofTrueTypeFont	verdana30;
+        ofxTrueTypeFontUC	verdana30;
+    
+        static const int STORY_ITEM_WIDTH = 420;
     
         string company;
         int nResults;
