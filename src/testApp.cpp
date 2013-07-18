@@ -14,7 +14,6 @@ void testApp::setup(){
     
     titleX = 20;
     titleY = 40;
-    val = 100;
     
     
     company = "";
@@ -99,6 +98,10 @@ void testApp::keyPressed(int key){
     if(key == OF_KEY_DEL || key == OF_KEY_BACKSPACE){
 		company = company.substr(0, company.length()-1);
 	}
+    
+    if(strncmp((char*)&key, "d", 1)==0){
+        if(currentlySelectedCompany != 0) deleteCompany(currentlySelectedCompany);
+    }
 	else if(key == OF_KEY_RETURN ){
 		loadData(company);
 	}
@@ -152,7 +155,7 @@ string testApp::stripQuotes(string s){
     
 }
 
-
+//---------------------------------------------------------------
 
 void testApp::loadData(string s){
     string api_key = "rwdd2u4dk4gu8ppwb6e8xgxj";
@@ -163,11 +166,8 @@ void testApp::loadData(string s){
     
 	if ( gotJson )
     {
-        
         string nme = ofToString(json["name"]);
-        
         string null = "null";
-        
         if (nme.find(null, 0) != string::npos) {
             notify("Could not find company: "+company);
             return;
@@ -175,26 +175,12 @@ void testApp::loadData(string s){
         else{
             notifyString = "";
         }
-        
-        
-        
-        
+
         heCompany* c = new heCompany;
-        
-        
         c->name = stripQuotes(nme);
         c->money_raised = ofToString(json["total_money_raised"]);
-        
-        
-        
         c->dollarValue = convertToNumber(c->money_raised);
         c->index = companies.size();
-        
-        
-        //c.startAt((c.index+1)*200, 200);
-        
-        
-        
         
         //c.startAt(0, 0);
         
@@ -207,19 +193,19 @@ void testApp::loadData(string s){
         setRadiiBasedOnInvestment();
         
         
-        
-        
     } else {
         cout  << "Failed to parse JSON\n" << json.getRawString() << endl;
         notify("Failed to parse JSON"+company);
 	}
 }
 
+//---------------------------------------------------------------
 
 void testApp::notify(string s){
     notifyString  = s;
 }
 
+//---------------------------------------------------------------
 
 void testApp::setRadiiBasedOnInvestment(){
     
@@ -269,14 +255,27 @@ void testApp::setRadiiBasedOnInvestment(){
 
 void testApp::onClickInsideCompanyCircle(heCompanyEvent & event){
     cout << "Click " << event.company->name;
+    if(currentlySelectedCompany != 0){
+        currentlySelectedCompany->isSelected = false;
+    }
+    
+    currentlySelectedCompany = event.company;
+    currentlySelectedCompany->isSelected = true;
+    
+    notify("[Options] Delete: D , More Info: I");
+}
+
+//--------------------------------------------------------------
+
+void testApp::deleteCompany(heCompany* company){
     for(int i=0; i<companies.size(); i++){
         
-        if(strncmp(companies[i]->name.c_str(), event.company->name.c_str(), event.company->name.length())==0){
+        if(strncmp(companies[i]->name.c_str(), company->name.c_str(), company->name.length())==0){
             delete companies[i];
             companies.erase(companies.begin()+i);
             
             cout << "Now showing: " << companies.size() << endl;
-            
+            setRadiiBasedOnInvestment();
             break;
         }
     }

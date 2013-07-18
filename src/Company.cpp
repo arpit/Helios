@@ -38,7 +38,15 @@ void heCompany::drawSphere(int color){
 
 void heCompany::draw(int color){
     ofSetColor(231, 76, 60, 100);
-    ofCircle(nowX, nowY,  nowRadius);
+    int rad = nowRadius;
+    if(isSelected){
+        ofCircle(nowX, nowY,  rad);
+        rad-=10;
+    }
+    
+    ofCircle(nowX, nowY,  rad);
+    
+    
     
     ofSetColor(ofColor::black);
     ofRectangle rect = verdana30.getStringBoundingBox(name, 0,0);

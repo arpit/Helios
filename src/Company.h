@@ -16,30 +16,29 @@
 class heCompany{
     
 public:
-    
     ofEvent<heCompanyEvent> clickedInside;
     
     string name;
     string money_raised;
     ofTrueTypeFont	verdana30;
     
-    heCompany();
-    ~heCompany();
-    
     int index;
     int nowX;
     int nowY;
-    
     int radius;
     int nowRadius = 0;
     
+    bool isSelected = false;
+    
     double dollarValue;
     
+    
+    heCompany();
+    ~heCompany();
     void startAt(int x, int y);
     void setRadius(int r);
     void draw(int color);
     void drawSphere(int color);
-    void preDelete();
     
     void mouseMoved(ofMouseEventArgs & args);
     void mouseDragged(ofMouseEventArgs & args);

@@ -13,6 +13,7 @@
 		1DBFC9EA179486880035F4CF /* json_writer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1DBFC9E2179486880035F4CF /* json_writer.cpp */; };
 		1DBFC9EB179486880035F4CF /* ofxJSONElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1DBFC9E6179486880035F4CF /* ofxJSONElement.cpp */; };
 		1DBFC9EF17948EFD0035F4CF /* Company.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1DBFC9ED17948EFD0035F4CF /* Company.cpp */; };
+		1DEC6CA91797603600E1CDD8 /* Button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1DEC6CA71797603600E1CDD8 /* Button.cpp */; };
 		BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9710E8CC7DD009D7055 /* AGL.framework */; };
@@ -90,6 +91,8 @@
 		1DBFC9E7179486880035F4CF /* ofxJSONElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxJSONElement.h; sourceTree = "<group>"; };
 		1DBFC9ED17948EFD0035F4CF /* Company.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Company.cpp; sourceTree = "<group>"; };
 		1DBFC9EE17948EFD0035F4CF /* Company.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Company.h; sourceTree = "<group>"; };
+		1DEC6CA71797603600E1CDD8 /* Button.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Button.cpp; sourceTree = "<group>"; };
+		1DEC6CA81797603600E1CDD8 /* Button.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Button.h; sourceTree = "<group>"; };
 		BBAB23BE13894E4700AA2426 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
 		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E45BE9710E8CC7DD009D7055 /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = /System/Library/Frameworks/AGL.framework; sourceTree = "<absolute>"; };
@@ -297,6 +300,8 @@
 				1DBFC9EE17948EFD0035F4CF /* Company.h */,
 				1D906D801797366100D4D59B /* CompanyEvent.cpp */,
 				1D906D811797366100D4D59B /* CompanyEvent.h */,
+				1DEC6CA71797603600E1CDD8 /* Button.cpp */,
+				1DEC6CA81797603600E1CDD8 /* Button.h */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -402,6 +407,7 @@
 				1DBFC9EA179486880035F4CF /* json_writer.cpp in Sources */,
 				1DBFC9EF17948EFD0035F4CF /* Company.cpp in Sources */,
 				1D906D821797366100D4D59B /* CompanyEvent.cpp in Sources */,
+				1DEC6CA91797603600E1CDD8 /* Button.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

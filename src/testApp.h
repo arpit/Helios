@@ -7,18 +7,22 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <algorithm>
-
+#include "Button.h"
 class testApp : public ofBaseApp{
 	public:
-		void setup();
+		
+        ofTrueTypeFont	verdana30;
+        string company;
+        int nResults;
+        float size;
+        
+        int titleX;
+        int titleY;
+    
+        void setup();
 		void update();
 		void draw();
     
-        ofEvent<ofVec2f> clickedInside;
-    
-    
-    int val;
-		
 		void keyPressed(int key);
 		void keyReleased(int key);
 		void mouseMoved(int x, int y);
@@ -29,31 +33,23 @@ class testApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
     
-    
-        ofTrueTypeFont	verdana30;
-        string company;
-    
-    
-        int nResults;
-        float size;
-        
-        int titleX;
-        int titleY;
-    
         double convertToNumber(string m);
     
     private:
     
+        heCompany* currentlySelectedCompany = 0;
+    
         string notifyString;
         ofEasyCam cam;
+        vector<heCompany*> companies;
+        string stripQuotes(string s);
     
         void loadData(string s);
-        vector<heCompany*> companies;
         void setRadiiBasedOnInvestment();
-        string stripQuotes(string s);
         void notify(string s);
-    
         void onClickInsideCompanyCircle(heCompanyEvent & company);
     
-        
+        void deleteCompany(heCompany* company);
+    
+
 };
