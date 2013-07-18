@@ -10,6 +10,9 @@
 #include "Button.h"
 #include <GLUT/glut.h>
 #include "RSSItem.h"
+#include "Entity.h"
+
+
 class testApp : public ofBaseApp{
 	public:
 		

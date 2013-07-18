@@ -12,8 +12,9 @@
 #include <iostream>
 #include "ofMain.h"
 #include "CompanyEvent.h"
+#include "Entity.h"
 
-class heCompany{
+class heCompany : public Entity{
     
 public:
     ofEvent<heCompanyEvent> clickedInside;
@@ -35,17 +36,19 @@ public:
     
     int numberOfEmployees;
     
-    heCompany();
+    heCompany(ofxJSONElement _data);
     ~heCompany();
     void startAt(int x, int y);
     void setRadius(int r);
-    void draw(int color);
+    //void draw(int color);
     void drawSphere(int color);
     
     void mouseMoved(ofMouseEventArgs & args);
     void mouseDragged(ofMouseEventArgs & args);
     void mousePressed(ofMouseEventArgs & args);
     void mouseReleased(ofMouseEventArgs & args);
+    
+    void update();
     
     bool inside(float _x, float _y );
     

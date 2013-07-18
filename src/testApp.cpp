@@ -41,7 +41,9 @@ void testApp::setup(){
 //--------------------------------------------------------------
 void testApp::update(){
     
-   
+    for(int i=0; i<companies.size(); i++){
+        companies[i]->update();
+    }
     
 }
 
@@ -75,44 +77,48 @@ void testApp::draw(){
     
     
     
-
-
-    
-    ofSetHexColor(0xDCDCDC);
-    
-    ofEnableSmoothing();
     
     for(int i=0; i<companies.size(); i++){
-        ofSetCircleResolution(100);
-        companies[i]->draw(red);
+        companies[i]->draw();
     }
     
-    ofDrawBitmapStringHighlight(company, ofPoint(titleX, titleY));
+
     
-    ofSetHexColor(0xEFF3F3);
-    
-    if(notifyString.size() > 0){
-        ofDrawBitmapStringHighlight(notifyString, ofPoint(0, ofGetWindowHeight()-20), ofColor(236, 240, 241), ofColor::black);
-    }
-    
-    
-    int nowTitleX = ofGetWindowWidth()- 600;
-    int nowTitleY = 20;
-    ofRectangle rect;
-    
-    
-    
-    if(true){
-        for(int i=0; i<feedItems.size(); i++){
-            rect = verdana30.getStringBoundingBox(feedItems[i].title, 0, nowTitleY);
-            nowTitleY = rect.getBottom()+40;
-            //ofSetColor(ofColor::white);
-            //ofRect(rect);
-            ofSetHexColor(0x000000);
-            //verdana30.drawString(feedItems[i].title, nowTitleX, nowTitleY);
-            ofDrawBitmapStringHighlight(feedItems[i].title, nowTitleX, nowTitleY);
-        }
-    }
+//    ofSetHexColor(0xDCDCDC);
+//    
+//    ofEnableSmoothing();
+//    
+//    for(int i=0; i<companies.size(); i++){
+//        ofSetCircleResolution(100);
+//        companies[i]->draw();
+//    }
+//    
+//    ofDrawBitmapStringHighlight(company, ofPoint(titleX, titleY));
+//    
+//    ofSetHexColor(0xEFF3F3);
+//    
+//    if(notifyString.size() > 0){
+//        ofDrawBitmapStringHighlight(notifyString, ofPoint(0, ofGetWindowHeight()-20), ofColor(236, 240, 241), ofColor::black);
+//    }
+//    
+//    
+//    int nowTitleX = ofGetWindowWidth()- 600;
+//    int nowTitleY = 20;
+//    ofRectangle rect;
+//    
+//    
+//    
+//    if(true){
+//        for(int i=0; i<feedItems.size(); i++){
+//            rect = verdana30.getStringBoundingBox(feedItems[i].title, 0, nowTitleY);
+//            nowTitleY = rect.getBottom()+40;
+//            //ofSetColor(ofColor::white);
+//            //ofRect(rect);
+//            ofSetHexColor(0x000000);
+//            //verdana30.drawString(feedItems[i].title, nowTitleX, nowTitleY);
+//            ofDrawBitmapStringHighlight(feedItems[i].title, nowTitleX, nowTitleY);
+//        }
+//    }
     
     
     
@@ -243,7 +249,7 @@ void testApp::loadData(string s){
             notifyString = "";
         }
 
-        heCompany* c = new heCompany;
+        heCompany* c = new heCompany(json);
         c->name = stripQuotes(nme);
         c->money_raised = ofToString(json["total_money_raised"]);
         c->dollarValue = convertToNumber(c->money_raised);

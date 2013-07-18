@@ -9,7 +9,7 @@
 #include "Company.h"
 
 
-heCompany::heCompany(){
+heCompany::heCompany(ofxJSONElement _data):Entity(_data){
     verdana30.loadFont("verdana.ttf", 12, true, true);
 }
 
@@ -25,6 +25,13 @@ void heCompany::startAt(int x, int y){
     ofRegisterMouseEvents(this);
 }
 
+void heCompany::update(){
+    Entity::update();
+    x = nowX;
+    y = nowY;
+}
+
+
 void heCompany::setRadius(int r){
     radius = r;
 }
@@ -36,32 +43,32 @@ void heCompany::drawSphere(int color){
     ofSphere(nowX, nowY, 0, 1);
 }
 
-void heCompany::draw(int color){
-    ofSetColor(231, 76, 60, 100);
-    int rad = nowRadius;
-    if(isSelected){
-        ofCircle(nowX, nowY,  rad);
-        rad-=10;
-    }
-    
-    ofCircle(nowX, nowY,  rad);
-    
-    
-    
-    ofSetColor(ofColor::black);
-    ofRectangle rect = verdana30.getStringBoundingBox(name, 0,0);
-    
-    verdana30.drawString(name, nowX-rect.width/2, nowY-rect.height/2+10);
-    
-    if(nowRadius < radius){
-        nowRadius+=10;
-    }
-    
-    if(nowRadius > radius){
-        nowRadius-=10;
-    }
-    
-}
+//void heCompany::draw(int color){
+//    ofSetColor(231, 76, 60, 100);
+//    int rad = nowRadius;
+//    if(isSelected){
+//        ofCircle(nowX, nowY,  rad);
+//        rad-=10;
+//    }
+//    
+//    ofCircle(nowX, nowY,  rad);
+//    
+//    
+//    
+//    ofSetColor(ofColor::black);
+//    ofRectangle rect = verdana30.getStringBoundingBox(name, 0,0);
+//    
+//    verdana30.drawString(name, nowX-rect.width/2, nowY-rect.height/2+10);
+//    
+//    if(nowRadius < radius){
+//        nowRadius+=10;
+//    }
+//    
+//    if(nowRadius > radius){
+//        nowRadius-=10;
+//    }
+//    
+//}
 
 
 void heCompany::mouseMoved(ofMouseEventArgs & args){}
