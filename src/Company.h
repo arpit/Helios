@@ -34,7 +34,7 @@ public:
     
     int numberOfEmployees;
     
-    heCompany(ofxJSONElement _data);
+    heCompany();
     ~heCompany();
     void startAt(int x, int y);
     void setRadius(int r);
@@ -46,7 +46,7 @@ public:
     void mousePressed(ofMouseEventArgs & args);
     void mouseReleased(ofMouseEventArgs & args);
     
-    void update();
+    
     
     bool inside(float _x, float _y );
     

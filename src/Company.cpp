@@ -9,7 +9,7 @@
 #include "Company.h"
 
 
-heCompany::heCompany(ofxJSONElement _data):Entity(_data){
+heCompany::heCompany():Entity(){
     verdana30.loadFont("verdana.ttf", 12, true, true);
 }
 
@@ -23,11 +23,6 @@ void heCompany::startAt(int _x, int _y){
     x = _x;
     y = _y;
     ofRegisterMouseEvents(this);
-}
-
-void heCompany::update(){
-    //Entity::update();
-   
 }
 
 

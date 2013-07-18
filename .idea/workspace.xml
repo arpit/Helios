@@ -1,179 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="796900e9-af37-4ca3-bb34-93484c812f6d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Resources/Caution.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/A/Resources/Caution.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/Current/Resources/Caution.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/GLUT" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/A/GLUT" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/Current/GLUT" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/MacOS/StartupsVizDebug" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StartupsViz.xcodeproj/project.xcworkspace/xcuserdata/amendo202.xcuserdatad/UserInterfaceState.xcuserstate" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Resources/blankCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/A/Resources/blankCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/Current/Resources/blankCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Resources/bottomCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/A/Resources/bottomCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/Current/Resources/bottomCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Resources/bottomleftCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/A/Resources/bottomleftCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/Current/Resources/bottomleftCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Resources/bottomrightCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/A/Resources/bottomrightCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/Current/Resources/bottomrightCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Resources/English.lproj/GLUT.nib/classes.nib" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Resources/English.lproj/GLUTClipboard.nib/classes.nib" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Resources/English.lproj/GLUTPreferences.nib/classes.nib" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/A/Resources/English.lproj/GLUT.nib/classes.nib" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/A/Resources/English.lproj/GLUTClipboard.nib/classes.nib" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/A/Resources/English.lproj/GLUTPreferences.nib/classes.nib" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/Current/Resources/English.lproj/GLUT.nib/classes.nib" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/Current/Resources/English.lproj/GLUTClipboard.nib/classes.nib" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/Current/Resources/English.lproj/GLUTPreferences.nib/classes.nib" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Resources/crossCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/A/Resources/crossCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/Current/Resources/crossCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Resources/cycleCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/A/Resources/cycleCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/Current/Resources/cycleCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Resources/destroyCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/A/Resources/destroyCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/Current/Resources/destroyCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Resources/fingerCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/A/Resources/fingerCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/Current/Resources/fingerCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Resources/helpCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/A/Resources/helpCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/Current/Resources/helpCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Resources/English.lproj/GLUT.nib/info.nib" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Resources/English.lproj/GLUTClipboard.nib/info.nib" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Resources/English.lproj/GLUTPreferences.nib/info.nib" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/A/Resources/English.lproj/GLUT.nib/info.nib" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/A/Resources/English.lproj/GLUTClipboard.nib/info.nib" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/A/Resources/English.lproj/GLUTPreferences.nib/info.nib" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/Current/Resources/English.lproj/GLUT.nib/info.nib" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/Current/Resources/English.lproj/GLUTClipboard.nib/info.nib" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/Current/Resources/English.lproj/GLUTPreferences.nib/info.nib" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Resources/leftCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/A/Resources/leftCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/Current/Resources/leftCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Resources/leftRightCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/A/Resources/leftRightCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/Current/Resources/leftRightCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/MacOS/libfmodex.dylib" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Resources/English.lproj/GLUT.nib/objects.nib" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Resources/English.lproj/GLUTClipboard.nib/objects.nib" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Resources/English.lproj/GLUTPreferences.nib/objects.nib" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/A/Resources/English.lproj/GLUT.nib/objects.nib" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/A/Resources/English.lproj/GLUTClipboard.nib/objects.nib" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/A/Resources/English.lproj/GLUTPreferences.nib/objects.nib" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/Current/Resources/English.lproj/GLUT.nib/objects.nib" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/Current/Resources/English.lproj/GLUTClipboard.nib/objects.nib" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/Current/Resources/English.lproj/GLUTPreferences.nib/objects.nib" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Resources/rightArrowCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/A/Resources/rightArrowCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/Current/Resources/rightArrowCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Resources/rightCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/A/Resources/rightCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/Current/Resources/rightCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Resources/sprayCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/A/Resources/sprayCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/Current/Resources/sprayCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Resources/topCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/A/Resources/topCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/Current/Resources/topCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Resources/topleftCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/A/Resources/topleftCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/Current/Resources/topleftCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Resources/toprightCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/A/Resources/toprightCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/Current/Resources/toprightCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Resources/upDownCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/A/Resources/upDownCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/Current/Resources/upDownCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/data/verdana.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Resources/waitCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/A/Resources/waitCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/Current/Resources/waitCursor.tiff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Resources/English.lproj/GLUTUI.strings" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/A/Resources/English.lproj/GLUTUI.strings" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/Current/Resources/English.lproj/GLUTUI.strings" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/Helios.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Info.plist" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Resources/Info.plist" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/A/Resources/Info.plist" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/Current/Resources/Info.plist" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Resources/English.lproj/InfoPlist.strings" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/A/Resources/English.lproj/InfoPlist.strings" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/Current/Resources/English.lproj/InfoPlist.strings" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/PkgInfo" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/shapes/Ring.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/shapes/Ring.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/amendo202.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Headers/copy.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/A/Headers/copy.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/Current/Headers/copy.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/runConfigurations/emptyExample_Debug.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/runConfigurations/emptyExample_Release.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Headers/extrude.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/A/Headers/extrude.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/Current/Headers/extrude.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Headers/glsmap.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/A/Headers/glsmap.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/Current/Headers/glsmap.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Headers/glsmapint.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/A/Headers/glsmapint.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/Current/Headers/glsmapint.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Headers/glut.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/A/Headers/glut.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/Current/Headers/glut.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Headers/glutbitmap.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/A/Headers/glutbitmap.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/Current/Headers/glutbitmap.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Headers/glutf90.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/A/Headers/glutf90.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/Current/Headers/glutf90.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Headers/glutstroke.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/A/Headers/glutstroke.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/Current/Headers/glutstroke.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Headers/gutil.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/A/Headers/gutil.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/Current/Headers/gutil.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Headers/intersect.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/A/Headers/intersect.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/Current/Headers/intersect.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Headers/port.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/A/Headers/port.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/Current/Headers/port.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Headers/rot.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/A/Headers/rot.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/Current/Headers/rot.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Headers/segment.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/A/Headers/segment.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/Current/Headers/segment.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Headers/tube.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/A/Headers/tube.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/Current/Headers/tube.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Headers/tube_gc.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/A/Headers/tube_gc.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/Current/Headers/tube_gc.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Headers/vvector.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/A/Headers/vvector.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/StartupsVizDebug.app/Contents/Frameworks/GLUT.framework/Versions/Current/Headers/vvector.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/xcode.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StartupsViz.xcodeproj/xcuserdata/amendo202.xcuserdatad/xcschemes/xcschememanagement.plist" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity.cpp" afterPath="$PROJECT_DIR$/src/Entity.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity.h" afterPath="$PROJECT_DIR$/src/Entity.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StartupsViz.xcodeproj/xcshareddata/xcschemes/emptyExample Debug.xcscheme" afterPath="$PROJECT_DIR$/StartupsViz.xcodeproj/xcshareddata/xcschemes/emptyExample Debug.xcscheme" />
-    </list>
+    <list default="true" id="796900e9-af37-4ca3-bb34-93484c812f6d" name="Default" comment="" />
     <ignored path="Helios.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="796900e9-af37-4ca3-bb34-93484c812f6d" time="1374180344679" ignored="false" />
@@ -262,22 +90,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="testApp.cpp" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="testApp.cpp" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/testApp.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="249" column="8" selection-start="5671" selection-end="5671" vertical-scroll-proportion="0.0">
-              <folding>
-                <marker date="1374182632000" expanded="true" signature="143:345" placeholder="{...}" />
-                <marker date="1374182632000" expanded="true" signature="9992:9994" placeholder="{...}" />
-              </folding>
+            <state line="209" column="81" selection-start="4597" selection-end="4597" vertical-scroll-proportion="0.71046513">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Entity.cpp" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ofFontTypes.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ofFontTypes.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Entity.cpp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Entity.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="113" selection-start="433" selection-end="433" vertical-scroll-proportion="0.37288135">
+            <state line="23" column="36" selection-start="433" selection-end="433" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -357,6 +191,34 @@
     <option name="y" value="22" />
     <option name="width" value="2556" />
     <option name="height" value="1418" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>CSS</id>
+          </State>
+          <State>
+            <id>RELAX NG</id>
+          </State>
+          <State>
+            <id>XPath</id>
+          </State>
+          <State>
+            <id>XSLT</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Clang Issues</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -491,7 +353,7 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="com.jetbrains.cidr.settings.OCExternalDocConfigurable" />
+    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Font" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="false" />
     <property name="OBJC.PRESERVED_TARGET_SELECTION" value="StartupsViz" />
@@ -543,12 +405,12 @@
     <frame x="4" y="22" width="2556" height="1418" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32930514" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24990131" sideWeight="0.6004532" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24832214" sideWeight="0.6004532" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39954683" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24832214" sideWeight="0.6706949" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39954683" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -625,11 +487,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../../libs/openFrameworks/graphics/ofGraphics.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="20" selection-start="808" selection-end="808" vertical-scroll-proportion="-9.88" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../libs/openFrameworks/types/ofBaseTypes.h">
       <provider selected="true" editor-type-id="text-editor">
         <state line="34" column="60" selection-start="698" selection-end="698" vertical-scroll-proportion="0.0" />
@@ -684,16 +541,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/testApp.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="249" column="8" selection-start="5671" selection-end="5671" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1374182632000" expanded="true" signature="143:345" placeholder="{...}" />
-            <marker date="1374182632000" expanded="true" signature="9992:9994" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/CompanyEvent.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -731,7 +578,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="113" selection-start="433" selection-end="433" vertical-scroll-proportion="0.37288135">
+        <state line="23" column="36" selection-start="433" selection-end="433" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ofFontTypes.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/testApp.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="209" column="81" selection-start="4597" selection-end="4597" vertical-scroll-proportion="0.71046513">
           <folding />
         </state>
       </provider>

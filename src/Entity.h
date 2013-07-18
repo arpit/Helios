@@ -16,7 +16,7 @@
 
 
 class Entity : public Drawable{
-    vector <float> data;
+    
 
 public:
     float x, y , z;
@@ -30,7 +30,7 @@ public:
     ofxJSONElement fundingRounds;
 
    // void drawRing(float _x, float _y, float r1, float r2 , int color);
-    void setData(vector<float> _data);
+    void setData(vector<float> _data );
 };
 
 

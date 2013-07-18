@@ -39,6 +39,7 @@
 		E7E077E515D3B63C0020DFD4 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E077E415D3B63C0020DFD4 /* CoreVideo.framework */; };
 		E7E077E815D3B6510020DFD4 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E077E715D3B6510020DFD4 /* QTKit.framework */; };
 		E7F985F815E0DEA3003869B5 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F985F515E0DE99003869B5 /* Accelerate.framework */; };
+		F0045B931798968900185D8A /* Ring.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0045B911798968900185D8A /* Ring.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +133,8 @@
 		E7E077E415D3B63C0020DFD4 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
 		E7E077E715D3B6510020DFD4 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
 		E7F985F515E0DE99003869B5 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = /System/Library/Frameworks/Accelerate.framework; sourceTree = "<absolute>"; };
+		F0045B911798968900185D8A /* Ring.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ring.cpp; sourceTree = "<group>"; };
+		F0045B921798968900185D8A /* Ring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ring.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -308,6 +311,7 @@
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				F0045B901798968900185D8A /* shapes */,
 				1D52D46017987FB60096B244 /* Node.cpp */,
 				1D52D46117987FB60096B244 /* Node.h */,
 				1D52D45717987FAB0096B244 /* Drawable.cpp */,
@@ -338,6 +342,15 @@
 				E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */,
 			);
 			name = openFrameworks;
+			sourceTree = "<group>";
+		};
+		F0045B901798968900185D8A /* shapes */ = {
+			isa = PBXGroup;
+			children = (
+				F0045B911798968900185D8A /* Ring.cpp */,
+				F0045B921798968900185D8A /* Ring.h */,
+			);
+			path = shapes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -438,6 +451,7 @@
 				1D52D45E17987FAB0096B244 /* Entity.cpp in Sources */,
 				1D52D45F17987FAB0096B244 /* Link.cpp in Sources */,
 				1D52D46217987FB60096B244 /* Node.cpp in Sources */,
+				F0045B931798968900185D8A /* Ring.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,7 +490,11 @@
 					"$(OF_CORE_HEADERS)",
 					"/Users/amathu001/labs/macOS/of_v0.7.4_osx_release/apps/myApps/StartUps_Viz/ofxJSON/libs/**",
 					src,
+					"$(HEADER_SEARCH_PATHS_QUOTED_FOR_PROJECT_1)",
+					"$(HEADER_SEARCH_PATHS_QUOTED_FOR_PROJECT_2)",
 				);
+				HEADER_SEARCH_PATHS_QUOTED_FOR_PROJECT_1 = "\"$(SRCROOT)/ofxJSON/libs/include/json\"/**";
+				HEADER_SEARCH_PATHS_QUOTED_FOR_PROJECT_2 = "\"$(SRCROOT)/ofxJSON/libs/include\"/**";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				OTHER_CPLUSPLUSFLAGS = (
 					"-D__MACOSX_CORE__",
@@ -512,7 +530,11 @@
 					"$(OF_CORE_HEADERS)",
 					"/Users/amathu001/labs/macOS/of_v0.7.4_osx_release/apps/myApps/StartUps_Viz/ofxJSON/libs/**",
 					src,
+					"$(HEADER_SEARCH_PATHS_QUOTED_FOR_PROJECT_1)",
+					"$(HEADER_SEARCH_PATHS_QUOTED_FOR_PROJECT_2)",
 				);
+				HEADER_SEARCH_PATHS_QUOTED_FOR_PROJECT_1 = "\"$(SRCROOT)/ofxJSON/libs/include/json\"/**";
+				HEADER_SEARCH_PATHS_QUOTED_FOR_PROJECT_2 = "\"$(SRCROOT)/ofxJSON/libs/include\"/**";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				OTHER_CPLUSPLUSFLAGS = (
 					"-D__MACOSX_CORE__",

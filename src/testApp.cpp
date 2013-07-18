@@ -37,6 +37,10 @@ void testApp::setup(){
     loadFeed();
     
     notify("[E: Compare by Employee Size], [$: Compare by $]");
+    
+    loadData("google");
+    loadData("comcast");
+    
 }
 
 
@@ -247,7 +251,11 @@ void testApp::loadData(string s){
             notifyString = "";
         }
 
-        heCompany* c = new heCompany(json);
+        heCompany* c = new heCompany();
+        
+        vector<float> d (10,5000);
+        c->setData(d);
+        
         c->name = stripQuotes(nme);
         c->money_raised = ofToString(json["total_money_raised"]);
         c->dollarValue = convertToNumber(c->money_raised);
