@@ -24,8 +24,6 @@ public:
     ofTrueTypeFont	verdana30;
     
     int index;
-    int nowX;
-    int nowY;
     int radius;
     int nowRadius = 0;
     

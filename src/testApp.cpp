@@ -12,6 +12,8 @@ void testApp::setup(){
 	verdana30.setLineHeight(34.0f);
 	verdana30.setLetterSpacing(1.035);
     
+    ofEnableSmoothing();
+    
     titleX = 20;
     titleY = 40;
     
@@ -84,41 +86,37 @@ void testApp::draw(){
     
 
     
-//    ofSetHexColor(0xDCDCDC);
-//    
-//    ofEnableSmoothing();
-//    
-//    for(int i=0; i<companies.size(); i++){
-//        ofSetCircleResolution(100);
-//        companies[i]->draw();
-//    }
-//    
-//    ofDrawBitmapStringHighlight(company, ofPoint(titleX, titleY));
-//    
-//    ofSetHexColor(0xEFF3F3);
-//    
-//    if(notifyString.size() > 0){
-//        ofDrawBitmapStringHighlight(notifyString, ofPoint(0, ofGetWindowHeight()-20), ofColor(236, 240, 241), ofColor::black);
-//    }
-//    
-//    
-//    int nowTitleX = ofGetWindowWidth()- 600;
-//    int nowTitleY = 20;
-//    ofRectangle rect;
-//    
-//    
-//    
-//    if(true){
-//        for(int i=0; i<feedItems.size(); i++){
-//            rect = verdana30.getStringBoundingBox(feedItems[i].title, 0, nowTitleY);
-//            nowTitleY = rect.getBottom()+40;
-//            //ofSetColor(ofColor::white);
-//            //ofRect(rect);
-//            ofSetHexColor(0x000000);
-//            //verdana30.drawString(feedItems[i].title, nowTitleX, nowTitleY);
-//            ofDrawBitmapStringHighlight(feedItems[i].title, nowTitleX, nowTitleY);
-//        }
-//    }
+    ofSetHexColor(0xDCDCDC);
+    
+    for(int i=0; i<companies.size(); i++){
+        ofSetCircleResolution(100);
+        companies[i]->draw();
+    }
+    
+    ofDrawBitmapStringHighlight(company, ofPoint(titleX, titleY));
+    ofSetHexColor(0xEFF3F3);
+    
+    if(notifyString.size() > 0){
+        ofDrawBitmapStringHighlight(notifyString, ofPoint(0, ofGetWindowHeight()-20), ofColor(236, 240, 241), ofColor::black);
+    }
+    
+    int nowTitleX = ofGetWindowWidth()- 600;
+    int nowTitleY = 20;
+    ofRectangle rect;
+    
+    
+    
+    if(true){
+        for(int i=0; i<feedItems.size(); i++){
+            rect = verdana30.getStringBoundingBox(feedItems[i].title, 0, nowTitleY);
+            nowTitleY = rect.getBottom()+40;
+            //ofSetColor(ofColor::white);
+            //ofRect(rect);
+            ofSetHexColor(0x000000);
+            //verdana30.drawString(feedItems[i].title, nowTitleX, nowTitleY);
+            ofDrawBitmapStringHighlight(feedItems[i].title, nowTitleX, nowTitleY);
+        }
+    }
     
     
     

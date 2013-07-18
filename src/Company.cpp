@@ -19,16 +19,15 @@ heCompany::~heCompany(){
     ofUnregisterMouseEvents(this);
 }
 
-void heCompany::startAt(int x, int y){
-    nowX = x;
-    nowY = y;
+void heCompany::startAt(int _x, int _y){
+    x = _x;
+    y = _y;
     ofRegisterMouseEvents(this);
 }
 
 void heCompany::update(){
-    Entity::update();
-    x = nowX;
-    y = nowY;
+    //Entity::update();
+   
 }
 
 
@@ -40,7 +39,7 @@ void heCompany::setRadius(int r){
 void heCompany::drawSphere(int color){
     ofNoFill();
     ofSetColor(255, 255, 255);
-    ofSphere(nowX, nowY, 0, 1);
+//    /ofSphere(nowX, nowY, 0, 1);
 }
 
 //void heCompany::draw(int color){
@@ -85,5 +84,5 @@ void heCompany::mouseReleased(ofMouseEventArgs & args){
 }
 
 bool heCompany::inside(float _x, float _y ){
-    return (ofVec2f(_x, _y).distance(ofVec2f(nowX, nowY)) < nowRadius);
+    return (ofVec2f(_x, _y).distance(ofVec2f(x, y)) < nowRadius);
 }
