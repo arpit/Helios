@@ -28,11 +28,15 @@ void testApp::setup(){
     
     ofEnableAlphaBlending();
     
-    loadData("facebook");
-    loadData("twitter");
+//    loadData("facebook");
+//    loadData("twitter");
+
+    
+    loadFeed();
     
     notify("[E: Compare by Employee Size], [$: Compare by $]");
 }
+
 
 //--------------------------------------------------------------
 void testApp::update(){
@@ -90,7 +94,26 @@ void testApp::draw(){
     if(notifyString.size() > 0){
         ofDrawBitmapStringHighlight(notifyString, ofPoint(0, ofGetWindowHeight()-20), ofColor(236, 240, 241), ofColor::black);
     }
-
+    
+    
+    int nowTitleX = ofGetWindowWidth()- 600;
+    int nowTitleY = 20;
+    ofRectangle rect;
+    
+    
+    
+    if(true){
+        for(int i=0; i<feedItems.size(); i++){
+            rect = verdana30.getStringBoundingBox(feedItems[i].title, 0, nowTitleY);
+            nowTitleY = rect.getBottom()+40;
+            //ofSetColor(ofColor::white);
+            //ofRect(rect);
+            ofSetHexColor(0x000000);
+            //verdana30.drawString(feedItems[i].title, nowTitleX, nowTitleY);
+            ofDrawBitmapStringHighlight(feedItems[i].title, nowTitleX, nowTitleY);
+        }
+    }
+    
     
     
 }
@@ -172,6 +195,31 @@ string testApp::stripQuotes(string s){
     }
     return s;
     
+}
+
+//--------------------------------------------------------------
+
+void testApp::loadFeed(){
+    string url = "http://localhost/~amathu001/helios/feed.js";
+    ofxJSONElement json;
+	bool gotJson = json.open(url);
+    
+    feedItems.reserve(json["items"].size());
+    heRSSItem item;
+    
+    if(gotJson){
+        for(int i=0; i<json["items"].size(); i++)
+        {
+            item.title = json["items"][i]["title"].asString();
+            item.desc = json["items"][i]["desc"].asString();
+            item.startups = json["items"][i]["startups"].asString();
+            
+            loadData(item.startups);
+            
+            feedItems.push_back(item);
+            
+        }
+    }
 }
 
 //---------------------------------------------------------------

@@ -78,7 +78,15 @@ bool ofxJSONElement::openLocal(string filename)
 //--------------------------------------------------------------
 bool ofxJSONElement::openRemote(string filename, bool secure)
 {
-	string result = ofLoadURL(filename).data.getText();
+	ofHttpResponse resp = ofLoadURL(filename);
+    
+    
+    
+    if(resp.status >= 300 && resp.status < 400){
+        cout << " resp code --> " << resp.status << endl;
+    }
+    
+    string result = resp.data.getText();
 	
 	Reader reader;
 	if(!reader.parse( result, *this )) {

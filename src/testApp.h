@@ -9,11 +9,12 @@
 #include <algorithm>
 #include "Button.h"
 #include <GLUT/glut.h>
-
+#include "RSSItem.h"
 class testApp : public ofBaseApp{
 	public:
 		
         ofTrueTypeFont	verdana30;
+    
         string company;
         int nResults;
         float size;
@@ -40,6 +41,7 @@ class testApp : public ofBaseApp{
     private:
     
         heCompany* currentlySelectedCompany = 0;
+        vector<heRSSItem> feedItems;
     
         string notifyString;
         ofEasyCam cam;
@@ -53,6 +55,7 @@ class testApp : public ofBaseApp{
     
         void deleteCompany(heCompany* company);
         void setRadiiBasedOnEmployeeCount();
-    
+
+        void loadFeed();
 
 };
