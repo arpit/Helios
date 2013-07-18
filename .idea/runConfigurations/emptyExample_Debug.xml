@@ -1,0 +1,8 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="emptyExample Debug" type="AppleRunConfiguration" factoryName="Application" SCHEME_NAME="emptyExample Debug" PROJECT_NAME="StartupsViz" TARGET_NAME="StartupsViz" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" RUN_TARGET_PROJECT_NAME="StartupsViz" RUN_TARGET_NAME="StartupsViz" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+    <envs />
+    <RunnerSettings RunnerId="AppRunner" />
+    <ConfigurationWrapper RunnerId="AppRunner" />
+    <method />
+  </configuration>
+</component>

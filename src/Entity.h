@@ -12,23 +12,25 @@
 #include <iostream>
 #include "ofxJSONElement.h"
 #include "Drawable.h"
+#include "Ring.h"
 
 
 class Entity : public Drawable{
-    ofxJSONElement data;
+    vector <float> data;
 
 public:
     float x, y , z;
 
-    Entity(ofxJSONElement _data);
+    Entity();
 
     void update();
 
     void draw();
-
+    vector <Ring*> rings;
     ofxJSONElement fundingRounds;
 
-    void drawRing(float _x, float _y, float r1, float r2 , int color);
+   // void drawRing(float _x, float _y, float r1, float r2 , int color);
+    void setData(vector<float> _data);
 };
 
 

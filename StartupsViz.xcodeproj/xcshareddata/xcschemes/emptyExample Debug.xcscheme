@@ -14,9 +14,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-               BuildableName = "emptyExample.app"
-               BlueprintName = "emptyExample"
-               ReferencedContainer = "container:emptyExample.xcodeproj">
+               BuildableName = "StartupsVizDebug.app"
+               BlueprintName = "StartupsViz"
+               ReferencedContainer = "container:StartupsViz.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -65,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-            BuildableName = "StartupsViz.app"
+            BuildableName = "StartupsVizDebug.app"
             BlueprintName = "StartupsViz"
             ReferencedContainer = "container:StartupsViz.xcodeproj">
          </BuildableReference>
