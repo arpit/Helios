@@ -30,8 +30,10 @@ public:
     
     bool isSelected = false;
     
+    
     double dollarValue;
     
+    int numberOfEmployees;
     
     heCompany();
     ~heCompany();

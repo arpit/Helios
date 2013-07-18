@@ -30,6 +30,8 @@ void testApp::setup(){
     
     loadData("facebook");
     loadData("twitter");
+    
+    notify("[E: Compare by Employee Size], [$: Compare by $]");
 }
 
 //--------------------------------------------------------------
@@ -95,14 +97,31 @@ void testApp::draw(){
 
 //--------------------------------------------------------------
 void testApp::keyPressed(int key){
+    
+    
+    
+    if (glutGetModifiers() ==  GLUT_ACTIVE_SHIFT) {
+        
+        if(strncmp((char*)&key, "D", 1)==0){
+            if(currentlySelectedCompany != 0) deleteCompany(currentlySelectedCompany);
+        }
+        
+        else if(strncmp((char*)&key, "E", 1)==0){
+            setRadiiBasedOnEmployeeCount();
+        }
+        
+        else if(strncmp((char*)&key, "$", 1)==0){
+            setRadiiBasedOnInvestment();
+        }
+        return;
+    }
+    
+    cout << "Click : " << key << endl;
+    
     if(key == OF_KEY_DEL || key == OF_KEY_BACKSPACE){
 		company = company.substr(0, company.length()-1);
 	}
-    
-    if(strncmp((char*)&key, "d", 1)==0){
-        if(currentlySelectedCompany != 0) deleteCompany(currentlySelectedCompany);
-    }
-	else if(key == OF_KEY_RETURN ){
+    else if(key == OF_KEY_RETURN ){
 		loadData(company);
 	}
     else{
@@ -182,6 +201,16 @@ void testApp::loadData(string s){
         c->dollarValue = convertToNumber(c->money_raised);
         c->index = companies.size();
         
+        string numEmp = stripQuotes(ofToString(json["number_of_employees"]));
+        if (numEmp.find(null, 0) != string::npos) {
+            c->numberOfEmployees = -1;
+        }
+        else{
+            c->numberOfEmployees = atoi(numEmp.c_str());
+            cout << "Company: " << c->name << ",  count: " << c->numberOfEmployees;
+        }
+        
+        
         //c.startAt(0, 0);
         
         companies.push_back(c);
@@ -203,6 +232,53 @@ void testApp::loadData(string s){
 
 void testApp::notify(string s){
     notifyString  = s;
+}
+
+//---------------------------------------------------------------
+
+
+void testApp::setRadiiBasedOnEmployeeCount(){
+    int smallest= 10000000;
+    int largest = 0;
+    
+    float maxRad = max((float)120, (float)400/companies.size());
+    
+    for(int i=0; i< companies.size(); i++){
+        int value = companies[i]->numberOfEmployees;
+        if(value == -1) continue;
+        
+        if(value > largest){
+            largest = value;
+        }
+        if(value < smallest){
+            smallest = value;
+        }
+        
+    }
+    
+    float mult = 1.0;
+    
+    if(smallest == largest){
+        mult = -1;
+    }
+    else{
+        mult = maxRad/largest;
+    }
+    
+    
+    
+    for(int i=0; i< companies.size(); i++){
+        
+        if(mult == -1){
+            companies[i]->radius = maxRad;
+        }
+        else{
+            companies[i]->radius = max(10, (int)(companies[i]->numberOfEmployees * mult));
+            //cout << companies[i]->name << " - radius: " << companies[i]->radius << " (max rad: "<< maxRad <<", mult: "<< mult <<" )" << endl;
+            
+        }
+        
+    }
 }
 
 //---------------------------------------------------------------
@@ -262,7 +338,7 @@ void testApp::onClickInsideCompanyCircle(heCompanyEvent & event){
     currentlySelectedCompany = event.company;
     currentlySelectedCompany->isSelected = true;
     
-    notify("[Options] Delete: D , More Info: I");
+    notify("[Options] Delete: D |   More Info: I");
 }
 
 //--------------------------------------------------------------

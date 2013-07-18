@@ -8,6 +8,8 @@
 #include <stdlib.h>
 #include <algorithm>
 #include "Button.h"
+#include <GLUT/glut.h>
+
 class testApp : public ofBaseApp{
 	public:
 		
@@ -50,6 +52,7 @@ class testApp : public ofBaseApp{
         void onClickInsideCompanyCircle(heCompanyEvent & company);
     
         void deleteCompany(heCompany* company);
+        void setRadiiBasedOnEmployeeCount();
     
 
 };
