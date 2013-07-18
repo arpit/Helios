@@ -34,7 +34,7 @@ void Entity::draw() {
 
         lastAmount = lastAmount + amount;
         int color = 0x5EADF2;
-        cout << j << " " << r2 << " " << fundingRounds[j]["round_code"].asString() << endl;
+        //cout << j << " " << r2 << " " << fundingRounds[j]["round_code"].asString() << endl;
         if (  fundingRounds[j]["round_code"].asString() == "angel") {
             color = 0x7D8F9C;
         }

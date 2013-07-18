@@ -30,11 +30,11 @@ void testApp::setup(){
     
     ofEnableAlphaBlending();
     
-//    loadData("facebook");
-//    loadData("twitter");
+    loadData("facebook");
+    loadData("twitter");
 
     
-    loadFeed();
+//    loadFeed();
     
     notify("[E: Compare by Employee Size], [$: Compare by $]");
 }
@@ -132,8 +132,6 @@ void testApp::draw(){
 //--------------------------------------------------------------
 void testApp::keyPressed(int key){
     
-    
-    
     if (glutGetModifiers() ==  GLUT_ACTIVE_SHIFT) {
         
         if(strncmp((char*)&key, "D", 1)==0){
@@ -149,8 +147,6 @@ void testApp::keyPressed(int key){
         }
         return;
     }
-    
-    cout << "Click : " << key << endl;
     
     if(key == OF_KEY_DEL || key == OF_KEY_BACKSPACE){
 		company = company.substr(0, company.length()-1);
@@ -262,6 +258,18 @@ void testApp::loadData(string s){
         c->money_raised = ofToString(json["total_money_raised"]);
         c->dollarValue = convertToNumber(c->money_raised);
         c->index = companies.size();
+        
+       
+        
+        heRSSItem item;
+        
+        for(int i=0; i< json["milestones"].size(); i++){
+            item.desc = json["milestones"][i]["description"].asString();
+            c->newsItems.push_back(item);
+            
+            
+        }
+        
         
         string numEmp = stripQuotes(ofToString(json["number_of_employees"]));
         if (numEmp.find(null, 0) != string::npos) {

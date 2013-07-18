@@ -15,7 +15,6 @@ heCompany::heCompany(ofxJSONElement _data):Entity(_data){
 
 
 heCompany::~heCompany(){
-    cout << "Goodbye world" << endl;
     ofUnregisterMouseEvents(this);
 }
 
