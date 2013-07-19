@@ -54,6 +54,8 @@ class testApp : public ofBaseApp{
         heCompany* currentlySelectedCompany = 0;
         vector<heRSSItem> feedItems;
     
+        
+    
         string notifyString;
         ofEasyCam cam;
         vector<heCompany*> companies;
