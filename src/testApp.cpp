@@ -295,10 +295,12 @@ void testApp::loadData(string s){
         heCompany* c = new heCompany();
         
         float rand = ofRandom(5000, 10000);
-        
         vector<float> d (10,rand);
-        c->setData(d);
-        c->viewTimeLine();
+        vector<float> xs (10,0);
+
+        c->setData(d); // vector of values
+        c->setXs(xs);  // vector of x positions (global)
+        c->doStack(true); // stack rings or not
 
         c->name = stripQuotes(nme);
         c->money_raised = ofToString(json["total_money_raised"]);
@@ -495,7 +497,7 @@ void testApp::mousePressed(int x, int y, int button){
     //TODO
 
     for(int i=0; i<companies.size(); i++){
-        companies[i]->viewToggle();
+        //companies[i]->viewToggle();
     }
 }
 

@@ -19,32 +19,27 @@ class Entity : public Drawable{
     
 
 public:
+    Entity();
+
     void applyForce( ofVec2f f );
     void applyGravity( float mag );
     ofVec2f force;
     float x, y , z;
-    Entity();
+
     void update();
     void draw();
-    vector <Ring*> rings;
+
+    void setXs( vector <float> _xs );
     void setData(vector<float> _data );
-    float getRadius();
-    void concentricUpdate();
-    void timeLineUpdate();
-    void viewTimeLine();
-    void viewConcentric();
-    void viewToggle();
+    void doStack(bool stk);
+    float hue;  // 0-255 is set randomly after setData. Can be overwritten here.
+
 private:
-    float _totalRadius;
-
-
-
-    vector<float> data;
-    float hue;
+    bool _doStack;
+    vector <Ring*> rings;
+    vector<float> data, xs;
     bool usePhysics;
 
-
-    int viewMode;
 };
 
 
