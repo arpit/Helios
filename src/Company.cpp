@@ -67,13 +67,24 @@ void heCompany::drawSphere(int color){
 
 
 void heCompany::setRadiiBasedOnInvestment(){
+    info.clear();
     for (int i=0; i<fundingRounds.size(); i++) {
         info.push_back((float)fundingRounds[i].raisedAmount);
     }
     setData(info);
 }
 
+void heCompany::stackAt(int x, int y){
+    xpositions.clear();
+    for (int i=0; i<fundingRounds.size(); i++) {
+        xpositions.push_back(0);
+    }
+    y = y;
+    setXs(xpositions);
+}
+
 void heCompany::setXBasedOnTimeline(Timeline t){
+    xpositions.clear();
     for (int i=0; i<fundingRounds.size(); i++) {
         xpositions.push_back(t.getXBasedOn(fundingRounds[i].funded_day, fundingRounds[i].funded_month, fundingRounds[i].funded_year));
     }

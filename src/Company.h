@@ -63,6 +63,8 @@ public:
     void setRadiiBasedOnInvestment();
     void setXBasedOnTimeline(Timeline t);
     
+    void stackAt(int x, int y);
+    
     
 };
 

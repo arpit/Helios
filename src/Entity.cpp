@@ -38,6 +38,10 @@ void Entity::setData( vector <float> _data ){
     doStack(_doStack);
 }
 
+bool Entity::isStacked(){
+    return _doStack;
+}
+
 void Entity::doStack( bool stk ){
     _doStack = stk;
     if(stk){

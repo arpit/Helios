@@ -27,7 +27,9 @@ class testApp : public ofBaseApp{
         string company;
         int nResults;
         float size;
-        
+    
+        bool isStacked = false;
+    
         int titleX;
         int titleY;
     

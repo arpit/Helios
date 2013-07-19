@@ -34,6 +34,8 @@ public:
     void doStack(bool stk);
     float hue;  // 0-255 is set randomly after setData. Can be overwritten here.
 
+    bool isStacked();
+    
 private:
     bool _doStack;
     vector <Ring*> rings;

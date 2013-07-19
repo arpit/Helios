@@ -100,7 +100,10 @@ void testApp::draw(){
         companies[i]->draw();
     }
     
-    tl.draw();
+    
+    if(isStacked == false){
+        tl.draw();
+    }
 
     
     ofSetHexColor(0xDCDCDC);
@@ -154,12 +157,30 @@ void testApp::renderOnTimeline(heCompany* co){
 //--------------------------------------------------------------
 void testApp::keyPressed(int key){
     if (glutGetModifiers() ==  GLUT_ACTIVE_CTRL) {
+        
+        cout << key << endl;
+        
         if(key == 4){
             // clear all
             for(int i=0; i<companies.size(); i++){
                 deleteCompany(companies[i]);
             }
             tl.milestones.clear();
+        }
+        
+        if(key == 19){
+            for(int i=0; i<companies.size(); i++){
+                if(isStacked==false){
+                    cout << "stacking" << endl;
+                    companies[i]->doStack(true);
+                    companies[i]->stackAt(max( (float)100.0, ofRandom(ofGetWindowWidth()-200)), max((float)300, ofRandom(ofGetWindowHeight()-200)));
+                }
+                else{
+                    cout << "unstacking "<< endl;
+                    companies[i]->setXBasedOnTimeline(tl);
+                }
+                isStacked = !isStacked;
+            }
         }
         
         if(strncmp((char*)&key, "D", 1)==0){
