@@ -297,6 +297,7 @@ void testApp::loadData(string s){
         float rand = ofRandom(5000, 10000);
         
         vector<float> d (10,rand);
+        
         c->setData(d);
         c->viewTimeLine();
 
@@ -315,6 +316,14 @@ void testApp::loadData(string s){
             c->newsItems.push_back(item);
             
             
+        }
+        
+        c->fundingRounds.reserve(json["funding_rounds"].size());
+        FundingRound r;
+        for(int i=0; i<json["funding_rounds"].size(); i++){
+            r.sourceDescription = json["funding_rounds"][i]["source_description"].asString();
+            r.raisedAmount = json["funding_rounds"][i]["raised_amount"].asInt();
+            c->fundingRounds.push_back(r);
         }
         
         

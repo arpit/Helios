@@ -15,6 +15,7 @@
 #include "Entity.h"
 #include "RSSItem.h"
 #include "MileStone.h"
+#include "FundingRound.h"
 
 class heCompany : public Entity{
     
@@ -32,7 +33,7 @@ public:
     bool isSelected = false;
     
     
-    double dollarValue;
+    float dollarValue;
     
     int numberOfEmployees;
     
@@ -53,6 +54,7 @@ public:
     bool inside(float _x, float _y );
    
     vector<Milestone> newsItems;
+    vector<FundingRound> fundingRounds;
     
     
 };

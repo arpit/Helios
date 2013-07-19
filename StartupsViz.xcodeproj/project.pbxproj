@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		05942AF21798D1D90091AF86 /* heLerp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05942AF01798D1D90091AF86 /* heLerp.cpp */; };
+		1D1D3EFB17997DA0005F0F5D /* Investments.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1D1D3EF917997DA0005F0F5D /* Investments.cpp */; };
+		1D1D3EFE17997DF0005F0F5D /* FundingRound.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1D1D3EFC17997DF0005F0F5D /* FundingRound.cpp */; };
 		1D52D45D17987FAB0096B244 /* Drawable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1D52D45717987FAB0096B244 /* Drawable.cpp */; };
 		1D52D45E17987FAB0096B244 /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1D52D45917987FAB0096B244 /* Entity.cpp */; };
 		1D52D45F17987FAB0096B244 /* Link.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1D52D45B17987FAB0096B244 /* Link.cpp */; };
@@ -81,6 +83,10 @@
 /* Begin PBXFileReference section */
 		05942AF01798D1D90091AF86 /* heLerp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = heLerp.cpp; sourceTree = "<group>"; };
 		05942AF11798D1D90091AF86 /* heLerp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = heLerp.h; sourceTree = "<group>"; };
+		1D1D3EF917997DA0005F0F5D /* Investments.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Investments.cpp; sourceTree = "<group>"; };
+		1D1D3EFA17997DA0005F0F5D /* Investments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Investments.h; sourceTree = "<group>"; };
+		1D1D3EFC17997DF0005F0F5D /* FundingRound.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FundingRound.cpp; sourceTree = "<group>"; };
+		1D1D3EFD17997DF0005F0F5D /* FundingRound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FundingRound.h; sourceTree = "<group>"; };
 		1D52D45717987FAB0096B244 /* Drawable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Drawable.cpp; sourceTree = "<group>"; };
 		1D52D45817987FAB0096B244 /* Drawable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drawable.h; sourceTree = "<group>"; };
 		1D52D45917987FAB0096B244 /* Entity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Entity.cpp; sourceTree = "<group>"; };
@@ -377,6 +383,10 @@
 				1DEC6CAB17983E4000E1CDD8 /* RSSItem.h */,
 				1DF375E01798D33F00B12DE7 /* MileStone.cpp */,
 				1DF375E11798D33F00B12DE7 /* MileStone.h */,
+				1D1D3EF917997DA0005F0F5D /* Investments.cpp */,
+				1D1D3EFA17997DA0005F0F5D /* Investments.h */,
+				1D1D3EFC17997DF0005F0F5D /* FundingRound.cpp */,
+				1D1D3EFD17997DF0005F0F5D /* FundingRound.h */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -504,6 +514,8 @@
 				1D56FF501798B21500F0C6B5 /* timeline.cpp in Sources */,
 				1DF375DF1798C5C000B12DE7 /* DateUtils.cpp in Sources */,
 				1DF375E21798D33F00B12DE7 /* MileStone.cpp in Sources */,
+				1D1D3EFB17997DA0005F0F5D /* Investments.cpp in Sources */,
+				1D1D3EFE17997DF0005F0F5D /* FundingRound.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

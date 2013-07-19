@@ -15,6 +15,7 @@
 #include "ofxTrueTypeFontUC.h"
 #include "timeline.h"
 #include "MileStone.h"
+#include "FundingRound.h"
 
 class testApp : public ofBaseApp{
 	public:
