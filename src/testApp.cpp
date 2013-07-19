@@ -41,8 +41,8 @@ void testApp::setup(){
     //loadData("google");
     //loadData("comcast");
     
-    tl.begin(6, 10, 2000);
-    tl.end(7, 11, 2000);
+    tl.begin(1, 1, 2004);
+    tl.end(10, 10, 2013);
     
     
     
@@ -51,7 +51,7 @@ void testApp::setup(){
     
     m.day = 14;
     m.month = 10;
-    m.year = 2000;
+    m.year = 2009;
     
     tl.addMilestone(m);
     
@@ -159,8 +159,13 @@ void testApp::draw(){
 
 //--------------------------------------------------------------
 void testApp::keyPressed(int key){
-    
     if (glutGetModifiers() ==  GLUT_ACTIVE_SHIFT) {
+        if(strncmp((char*)&key, "M", 1)==0){
+            vector<Milestone> stories = companies[0]->newsItems;
+            for(int i=0; i<stories.size(); i++){
+                tl.addMilestone(stories[i]);
+            }
+        }
         
         if(strncmp((char*)&key, "D", 1)==0){
             if(currentlySelectedCompany != 0) deleteCompany(currentlySelectedCompany);
@@ -297,6 +302,10 @@ void testApp::loadData(string s){
         
         for(int i=0; i< json["milestones"].size(); i++){
             item.title = json["milestones"][i]["description"].asString();
+            item.year = json["milestones"][i]["stoned_year"].asInt();
+            item.month = json["milestones"][i]["stoned_month"].asInt();
+            item.day = json["milestones"][i]["stoned_day"].asInt();
+            
             c->newsItems.push_back(item);
             
             
