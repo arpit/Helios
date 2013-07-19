@@ -47,14 +47,8 @@ void Timeline::draw(){
         Milestone m = milestones[i];
         double diff = differenceInDays(  milestones[i].day, milestones[i].month, milestones[i].year, beginDay, beginMonth, beginYear);
         
-        cout << "Milestone diff: " << diff;
-        
         double xpos = diff / daysPerPixel;
-        
-        
-        
         ofCircle(xpos, y, 5);
-        
     }
 }
 
