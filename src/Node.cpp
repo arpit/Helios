@@ -16,15 +16,19 @@ Node::Node(float _x,float _y){
 
     forceX = 0;
     forceY = 0;
+    
+
+
 }
 
 void Node::update(){
-    float friction = .5;
-    forceX *= friction;
-    forceY *= friction;
-    
-    x += forceX;
-    y += forceY;
+    if(active){
+        float friction = .5;
+        //force *= friction;
+        
+        x += forceX;
+        y += forceY;
+    }
 }
 
 void Node::draw(){

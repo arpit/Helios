@@ -259,15 +259,16 @@ void testApp::loadData(string s){
 
         heCompany* c = new heCompany();
         
-        vector<float> d (10,5000);
-        c->setData(d);
+        float rand = ofRandom(5000, 10000);
         
+        vector<float> d (10,rand);
+        c->setData(d);
+        c->viewTimeLine();
+
         c->name = stripQuotes(nme);
         c->money_raised = ofToString(json["total_money_raised"]);
         c->dollarValue = convertToNumber(c->money_raised);
         c->index = companies.size();
-        
-       
         
         heRSSItem item;
         
@@ -453,7 +454,11 @@ void testApp::mouseDragged(int x, int y, int button){
 
 //--------------------------------------------------------------
 void testApp::mousePressed(int x, int y, int button){
+    //TODO
 
+    for(int i=0; i<companies.size(); i++){
+        companies[i]->viewToggle();
+    }
 }
 
 //--------------------------------------------------------------

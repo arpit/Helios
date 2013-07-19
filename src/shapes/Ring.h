@@ -20,10 +20,9 @@ class Ring {
     ofColor color;
     float x,y,r1,r2;
 
-    float _x,_y,_r1,_r2;
+    float _x,_y,_r1,_r2,_strength;
 
     void draw();
-    float lerp(float progress, float min, float max);
     void update();
 };
 

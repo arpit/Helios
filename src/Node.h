@@ -31,7 +31,7 @@ public:
     void update();
     void draw();
     
-
+    static bool active;
 
 private:
     
