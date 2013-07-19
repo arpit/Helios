@@ -153,9 +153,13 @@ void testApp::renderOnTimeline(heCompany* co){
 
 //--------------------------------------------------------------
 void testApp::keyPressed(int key){
-    if (glutGetModifiers() ==  GLUT_ACTIVE_SHIFT) {
-        if(strncmp((char*)&key, "M", 1)==0){
-            renderOnTimeline(companies[companies.size()-1]);
+    if (glutGetModifiers() ==  GLUT_ACTIVE_CTRL) {
+        if(key == 4){
+            // clear all
+            for(int i=0; i<companies.size(); i++){
+                deleteCompany(companies[i]);
+            }
+            tl.milestones.clear();
         }
         
         if(strncmp((char*)&key, "D", 1)==0){

@@ -16,6 +16,8 @@ heCompany::heCompany():Entity(){
 
 heCompany::~heCompany(){
     ofUnregisterMouseEvents(this);
+    newsItems.clear();
+    
 }
 
 void heCompany::startAt(int _x, int _y){
