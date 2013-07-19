@@ -38,14 +38,36 @@ void testApp::setup(){
     
     notify("[E: Compare by Employee Size], [$: Compare by $]");
     
-    loadData("google");
-    loadData("comcast");
+    //loadData("google");
+    //loadData("comcast");
+    
+    tl.begin(6, 10, 2000);
+    tl.end(7, 11, 2000);
+    
+    Milestone m;
+    m.title = "Hello";
+    
+    m.day = 14;
+    m.month = 10;
+    m.year = 2000;
+    
+    tl.addMilestone(m);
+    
+    
+    tl.setup();
+    
     
 }
 
 
 //--------------------------------------------------------------
 void testApp::update(){
+    
+    tl.x = 20;
+    tl.y = ofGetWindowHeight()-100;
+    tl.width = ofGetWindowWidth()/2;
+    tl.height = 10;
+    tl.update();
     
     for(int i=0; i<companies.size(); i++){
         companies[i]->update();
@@ -57,7 +79,7 @@ void testApp::update(){
 void testApp::draw(){
     
     
-    
+    tl.draw();
     
     
     
@@ -269,10 +291,10 @@ void testApp::loadData(string s){
         
        
         
-        heRSSItem item;
+        Milestone item;
         
         for(int i=0; i< json["milestones"].size(); i++){
-            item.desc = json["milestones"][i]["description"].asString();
+            item.title = json["milestones"][i]["description"].asString();
             c->newsItems.push_back(item);
             
             

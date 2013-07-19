@@ -14,6 +14,8 @@
 #include "CompanyEvent.h"
 #include "Entity.h"
 #include "RSSItem.h"
+#include "MileStone.h"
+
 class heCompany : public Entity{
     
 public:
@@ -50,7 +52,7 @@ public:
     
     bool inside(float _x, float _y );
    
-    vector<heRSSItem> newsItems;
+    vector<Milestone> newsItems;
     
     
 };

@@ -13,6 +13,8 @@
 #include "Entity.h"
 #include "heTextUtils.h"
 #include "ofxTrueTypeFontUC.h"
+#include "timeline.h"
+#include "MileStone.h"
 
 class testApp : public ofBaseApp{
 	public:
@@ -63,5 +65,8 @@ class testApp : public ofBaseApp{
         void setRadiiBasedOnEmployeeCount();
 
         void loadFeed();
+    
+        Timeline tl;
+    
 
 };
