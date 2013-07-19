@@ -40,23 +40,42 @@ void Timeline::draw(){
     
     double beginning = beginDay+(beginMonth*30)+(beginYear*356);
     
+    
+    int textYPos = 50;
         
     for(int i=0; i<milestones.size(); i++){
         Milestone m = milestones[i];
         double diff = differenceInDays(  milestones[i].day, milestones[i].month, milestones[i].year, beginDay, beginMonth, beginYear);
         
         double xpos = diff / daysPerPixel;
-        int textYPos = y - height/2 - 20;
         
-        ofDrawBitmapStringHighlight(milestones[i].title, xpos, textYPos);
-        ofSetColor(127, 140, 141);
+        textYPos+=20;
+        
+        int tYPos;
+        if(i%2==0){
+            tYPos = y+textYPos;
+        }
+        else{
+            tYPos = textYPos;
+        }
+        
+        glPushMatrix();
+            ofRectangle bounds;
+            ofTranslate(xpos, tYPos);
+            //glRotatef(-45, 0, 0, 1);
+            ofSetColor(ofColor::black);
+            drawHeighlightedTextInVerdana(milestones[i].title, -20, 0);
+        
+        glPopMatrix();
+        
+        ofSetColor(127, 140, 141, 100);
         ofSetLineWidth(1);
         
 //        ofNoFill();
 //        ofCurve(xpos+100, y-15, xpos, y, xpos, textYPos, xpos+100, textYPos+15);
 //        ofFill();
                 
-        ofLine(xpos, y, xpos, textYPos);
+        ofLine(xpos, y, xpos, tYPos);
         ofSetColor(ofColor::white);
         ofCircle(xpos, y, 5);
         

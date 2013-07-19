@@ -13,6 +13,7 @@
 #include "DateUtils.h"
 #include "ofMain.h"
 #include "MileStone.h"
+#include "heTextUtils.h"
 
 class Timeline{
 
