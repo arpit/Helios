@@ -1,6 +1,0 @@
-<component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="emptyExample Release" type="AppleRunConfiguration" factoryName="Application" SCHEME_NAME="emptyExample Release" PROJECT_NAME="emptyExample" TARGET_NAME="emptyExample" CONFIG_NAME="Release" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" RUN_TARGET_PROJECT_NAME="emptyExample" RUN_TARGET_NAME="emptyExample" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
-    <envs />
-    <method />
-  </configuration>
-</component>
