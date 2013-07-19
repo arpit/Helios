@@ -8,6 +8,26 @@
 
 #include "heTextUtils.h"
 
+
+void drawHeighlightedTextInVerdana(string s, int x, int y){
+    
+    ofTrueTypeFont::setGlobalDpi(72);
+    
+    if(verdana == 0){
+        
+        verdana = new ofTrueTypeFont;
+        
+        verdana->loadFont("frabk.ttf", 14, false);
+        
+        verdana->setLineHeight(14);
+        verdana->setLetterSpacing(1.037);
+        
+        
+    }
+    
+    verdana->drawString(s,x,y);
+}
+
 string wrapString(string text, int width, ofxTrueTypeFontUC* font) {
     
     string typeWrapped = "";

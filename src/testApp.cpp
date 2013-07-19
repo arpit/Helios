@@ -30,22 +30,46 @@ void testApp::setup(){
     
     ofEnableAlphaBlending();
     
-    loadData("facebook");
-    loadData("twitter");
+//    loadData("facebook");
+//    loadData("twitter");
 
     
 //    loadFeed();
     
     notify("[E: Compare by Employee Size], [$: Compare by $]");
     
-    loadData("google");
-    loadData("comcast");
+    //loadData("google");
+    //loadData("comcast");
+    
+    tl.begin(1, 1, 2007);
+    tl.end(10, 10, 2013);
+    
+    
+    
+    Milestone m;
+    m.title = "Hello";
+    
+    m.day = 14;
+    m.month = 10;
+    m.year = 2009;
+    
+    tl.addMilestone(m);
+    
+    
+    tl.setup();
+    
     
 }
 
 
 //--------------------------------------------------------------
 void testApp::update(){
+    
+    tl.x = 20;
+    tl.y = ofGetWindowHeight()/2;
+    tl.width = ofGetWindowWidth()-40;
+    tl.height = 60;
+    tl.update();
     
     for(int i=0; i<companies.size(); i++){
         companies[i]->update();
@@ -57,7 +81,7 @@ void testApp::update(){
 void testApp::draw(){
     
     
-    
+    tl.draw();
     
     
     
@@ -133,10 +157,21 @@ void testApp::draw(){
     
 }
 
+void testApp::renderOnTimeline(heCompany* co){
+    vector<Milestone> stories = co->newsItems;
+    tl.milestones.clear();
+    for(int i=0; i<stories.size(); i++){
+        Milestone m = stories[i];
+        tl.addMilestone(m);
+    }
+}
+
 //--------------------------------------------------------------
 void testApp::keyPressed(int key){
-    
     if (glutGetModifiers() ==  GLUT_ACTIVE_SHIFT) {
+        if(strncmp((char*)&key, "M", 1)==0){
+            renderOnTimeline(companies[companies.size()-1]);
+        }
         
         if(strncmp((char*)&key, "D", 1)==0){
             if(currentlySelectedCompany != 0) deleteCompany(currentlySelectedCompany);
@@ -269,11 +304,14 @@ void testApp::loadData(string s){
         c->money_raised = ofToString(json["total_money_raised"]);
         c->dollarValue = convertToNumber(c->money_raised);
         c->index = companies.size();
-        
-        heRSSItem item;
-        
+
+        Milestone item;
         for(int i=0; i< json["milestones"].size(); i++){
-            item.desc = json["milestones"][i]["description"].asString();
+            item.title = json["milestones"][i]["description"].asString();
+            item.year = json["milestones"][i]["stoned_year"].asInt();
+            item.month = json["milestones"][i]["stoned_month"].asInt();
+            item.day = json["milestones"][i]["stoned_day"].asInt();
+            
             c->newsItems.push_back(item);
             
             

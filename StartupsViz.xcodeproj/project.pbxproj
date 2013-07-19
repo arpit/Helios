@@ -14,6 +14,7 @@
 		1D52D46217987FB60096B244 /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1D52D46017987FB60096B244 /* Node.cpp */; };
 		1D52D46617988F660096B244 /* heTextUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1D52D46417988F660096B244 /* heTextUtils.cpp */; };
 		1D52D4691798922D0096B244 /* ofxTrueTypeFontUC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1D52D4671798922D0096B244 /* ofxTrueTypeFontUC.cpp */; };
+		1D56FF501798B21500F0C6B5 /* timeline.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1D56FF4E1798B21500F0C6B5 /* timeline.cpp */; };
 		1D906D821797366100D4D59B /* CompanyEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1D906D801797366100D4D59B /* CompanyEvent.cpp */; };
 		1DBFC9E8179486880035F4CF /* json_reader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1DBFC9DF179486880035F4CF /* json_reader.cpp */; };
 		1DBFC9E9179486880035F4CF /* json_value.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1DBFC9E0179486880035F4CF /* json_value.cpp */; };
@@ -22,6 +23,8 @@
 		1DBFC9EF17948EFD0035F4CF /* Company.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1DBFC9ED17948EFD0035F4CF /* Company.cpp */; };
 		1DEC6CA91797603600E1CDD8 /* Button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1DEC6CA71797603600E1CDD8 /* Button.cpp */; };
 		1DEC6CAC17983E4000E1CDD8 /* RSSItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1DEC6CAA17983E4000E1CDD8 /* RSSItem.cpp */; };
+		1DF375DF1798C5C000B12DE7 /* DateUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1DF375DD1798C5C000B12DE7 /* DateUtils.cpp */; };
+		1DF375E21798D33F00B12DE7 /* MileStone.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1DF375E01798D33F00B12DE7 /* MileStone.cpp */; };
 		BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9710E8CC7DD009D7055 /* AGL.framework */; };
@@ -90,6 +93,8 @@
 		1D52D46517988F660096B244 /* heTextUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = heTextUtils.h; sourceTree = "<group>"; };
 		1D52D4671798922D0096B244 /* ofxTrueTypeFontUC.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxTrueTypeFontUC.cpp; sourceTree = "<group>"; };
 		1D52D4681798922D0096B244 /* ofxTrueTypeFontUC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxTrueTypeFontUC.h; sourceTree = "<group>"; };
+		1D56FF4E1798B21500F0C6B5 /* timeline.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = timeline.cpp; sourceTree = "<group>"; };
+		1D56FF4F1798B21500F0C6B5 /* timeline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = timeline.h; sourceTree = "<group>"; };
 		1D906D801797366100D4D59B /* CompanyEvent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CompanyEvent.cpp; sourceTree = "<group>"; };
 		1D906D811797366100D4D59B /* CompanyEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompanyEvent.h; sourceTree = "<group>"; };
 		1DBFC9D1179486880035F4CF /* autolink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = autolink.h; sourceTree = "<group>"; };
@@ -118,6 +123,10 @@
 		1DEC6CA81797603600E1CDD8 /* Button.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Button.h; sourceTree = "<group>"; };
 		1DEC6CAA17983E4000E1CDD8 /* RSSItem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RSSItem.cpp; sourceTree = "<group>"; };
 		1DEC6CAB17983E4000E1CDD8 /* RSSItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSItem.h; sourceTree = "<group>"; };
+		1DF375DD1798C5C000B12DE7 /* DateUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DateUtils.cpp; sourceTree = "<group>"; };
+		1DF375DE1798C5C000B12DE7 /* DateUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateUtils.h; sourceTree = "<group>"; };
+		1DF375E01798D33F00B12DE7 /* MileStone.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MileStone.cpp; sourceTree = "<group>"; };
+		1DF375E11798D33F00B12DE7 /* MileStone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MileStone.h; sourceTree = "<group>"; };
 		BBAB23BE13894E4700AA2426 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
 		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E45BE9710E8CC7DD009D7055 /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = /System/Library/Frameworks/AGL.framework; sourceTree = "<absolute>"; };
@@ -183,8 +192,19 @@
 				1D52D46517988F660096B244 /* heTextUtils.h */,
 				05942AF01798D1D90091AF86 /* heLerp.cpp */,
 				05942AF11798D1D90091AF86 /* heLerp.h */,
+				1DF375DD1798C5C000B12DE7 /* DateUtils.cpp */,
+				1DF375DE1798C5C000B12DE7 /* DateUtils.h */,
 			);
 			name = utils;
+			sourceTree = "<group>";
+		};
+		1D56FF4D1798B20400F0C6B5 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				1D56FF4E1798B21500F0C6B5 /* timeline.cpp */,
+				1D56FF4F1798B21500F0C6B5 /* timeline.h */,
+			);
+			name = views;
 			sourceTree = "<group>";
 		};
 		1DBFC9CD179486880035F4CF /* ofxJSON */ = {
@@ -333,6 +353,7 @@
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				1D56FF4D1798B20400F0C6B5 /* views */,
 				F0045B901798968900185D8A /* shapes */,
 				1D52D46317988F590096B244 /* utils */,
 				1D52D46017987FB60096B244 /* Node.cpp */,
@@ -354,6 +375,8 @@
 				1DEC6CA81797603600E1CDD8 /* Button.h */,
 				1DEC6CAA17983E4000E1CDD8 /* RSSItem.cpp */,
 				1DEC6CAB17983E4000E1CDD8 /* RSSItem.h */,
+				1DF375E01798D33F00B12DE7 /* MileStone.cpp */,
+				1DF375E11798D33F00B12DE7 /* MileStone.h */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -478,6 +501,9 @@
 				1D52D46617988F660096B244 /* heTextUtils.cpp in Sources */,
 				1D52D4691798922D0096B244 /* ofxTrueTypeFontUC.cpp in Sources */,
 				05942AF21798D1D90091AF86 /* heLerp.cpp in Sources */,
+				1D56FF501798B21500F0C6B5 /* timeline.cpp in Sources */,
+				1DF375DF1798C5C000B12DE7 /* DateUtils.cpp in Sources */,
+				1DF375E21798D33F00B12DE7 /* MileStone.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,7 +553,7 @@
 					"-lpthread",
 					"-mtune=native",
 				);
-				SDKROOT = macosx;
+				SDKROOT = macosx10.7;
 			};
 			name = Debug;
 		};
@@ -567,7 +593,7 @@
 					"-lpthread",
 					"-mtune=native",
 				);
-				SDKROOT = macosx;
+				SDKROOT = macosx10.7;
 			};
 			name = Release;
 		};

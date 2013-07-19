@@ -13,7 +13,7 @@
 
 
 Ring::Ring(){
-    cout << "new ring" << endl;
+    //cout << "new ring" << endl;
     r1 = r2 = x = y = 0;
     _r1 = _r2 = _x = _y = 0;
     _strength = .1;
@@ -28,6 +28,7 @@ void Ring::update(){
     r1 = lerp(_strength,r1,_r1);
     r2 = lerp(_strength,r2,_r2);
    // cout << "update ring:" << _x << endl;
+
 
 }
 
