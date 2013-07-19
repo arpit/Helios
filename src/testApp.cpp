@@ -30,8 +30,8 @@ void testApp::setup(){
     
     ofEnableAlphaBlending();
     
-    loadData("facebook");
-    loadData("twitter");
+//    loadData("facebook");
+//    loadData("twitter");
 
     
 //    loadFeed();
@@ -43,6 +43,8 @@ void testApp::setup(){
     
     tl.begin(6, 10, 2000);
     tl.end(7, 11, 2000);
+    
+    
     
     Milestone m;
     m.title = "Hello";
@@ -64,9 +66,9 @@ void testApp::setup(){
 void testApp::update(){
     
     tl.x = 20;
-    tl.y = ofGetWindowHeight()-100;
-    tl.width = ofGetWindowWidth()/2;
-    tl.height = 10;
+    tl.y = ofGetWindowHeight()/2;
+    tl.width = ofGetWindowWidth()-40;
+    tl.height = 60;
     tl.update();
     
     for(int i=0; i<companies.size(); i++){
