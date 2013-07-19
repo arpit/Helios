@@ -16,7 +16,7 @@
 #include "timeline.h"
 #include "MileStone.h"
 #include "FundingRound.h"
-
+#include "timeline.h"
 class testApp : public ofBaseApp{
 	public:
 		
@@ -70,6 +70,8 @@ class testApp : public ofBaseApp{
         Timeline tl;
     
         void renderOnTimeline(heCompany* co);
+    
+    void setXBasedOnTimeline(Timeline t);
     
 
 };

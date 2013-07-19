@@ -71,6 +71,16 @@ void heCompany::setRadiiBasedOnInvestment(){
     setData(info);
 }
 
+void heCompany::setXBasedOnTimeline(Timeline t){
+    for (int i=0; i<fundingRounds.size(); i++) {
+        xpositions.push_back(t.getXBasedOn(fundingRounds[i].funded_day, fundingRounds[i].funded_month, fundingRounds[i].funded_year));
+    }
+    setXs(xpositions);
+    y = t.y;
+    doStack(false);
+
+}
+
 void heCompany::mouseMoved(ofMouseEventArgs & args){}
 void heCompany::mouseDragged(ofMouseEventArgs & args){}
 void heCompany::mousePressed(ofMouseEventArgs & args){}

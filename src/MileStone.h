@@ -19,6 +19,8 @@ public:
     int month;
     int year;
     
+    ofColor color;
+    
 };
 
 #endif /* defined(__StartupsViz__MileStone__) */

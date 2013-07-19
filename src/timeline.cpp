@@ -31,23 +31,24 @@ void Timeline::end(int day, int month, int year ){
     endYear = year;
 }
 
+float Timeline::getXBasedOn(int day, int month, int year){
+    double diff = differenceInDays(  day, month, year, beginDay, beginMonth, beginYear);
+    return  (float)(diff / daysPerPixel);
+}
+
 
 void Timeline::draw(){
-    ofSetColor(26, 188, 156, 100);
-    ofSetLineWidth(2);
+    ofSetColor(ofColor::white);
     ofRect(x, y-height/2, x+width, height);
     
     
     double beginning = beginDay+(beginMonth*30)+(beginYear*356);
     
-    
     int textYPos = 50;
         
     for(int i=0; i<milestones.size(); i++){
         Milestone m = milestones[i];
-        double diff = differenceInDays(  milestones[i].day, milestones[i].month, milestones[i].year, beginDay, beginMonth, beginYear);
-        
-        double xpos = diff / daysPerPixel;
+        float xpos  = getXBasedOn( milestones[i].day, milestones[i].month, milestones[i].year);
         
         textYPos+=20;
         
@@ -64,8 +65,8 @@ void Timeline::draw(){
             ofTranslate(xpos, tYPos);
             //glRotatef(-45, 0, 0, 1);
             ofSetColor(ofColor::black);
-            drawHeighlightedTextInVerdana(milestones[i].title, -20, 0);
-        
+            //drawHeighlightedTextInVerdana(milestones[i].title, -20, 0);
+            ofDrawBitmapStringHighlight(milestones[i].title, -20, 0, m.color);
         glPopMatrix();
         
         ofSetColor(127, 140, 141, 100);

@@ -16,6 +16,7 @@
 #include "RSSItem.h"
 #include "MileStone.h"
 #include "FundingRound.h"
+#include "timeline.h"
 
 class heCompany : public Entity{
     
@@ -33,6 +34,7 @@ public:
     bool isSelected = false;
     
     vector<float> info;
+    vector<float> xpositions;
     
     
     float dollarValue;
@@ -59,6 +61,7 @@ public:
     vector<FundingRound> fundingRounds;
     
     void setRadiiBasedOnInvestment();
+    void setXBasedOnTimeline(Timeline t);
     
     
 };

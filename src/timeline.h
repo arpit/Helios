@@ -43,6 +43,9 @@ public:
     void update();
     void draw();
     void addMilestone(Milestone ml);
+    float getXBasedOn(int day, int month, int year);
+    
+    
 };
 
 #endif /* defined(__StartupsViz__timeline__) */

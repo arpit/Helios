@@ -44,18 +44,7 @@ void testApp::setup(){
     tl.begin(1, 1, 2007);
     tl.end(10, 10, 2013);
     
-    
-    
-    Milestone m;
-    m.title = "Hello";
-    
-    m.day = 14;
-    m.month = 10;
-    m.year = 2009;
-    
-    tl.addMilestone(m);
-    
-    
+
     tl.setup();
     
     
@@ -65,10 +54,10 @@ void testApp::setup(){
 //--------------------------------------------------------------
 void testApp::update(){
     
-    tl.x = 20;
+    tl.x = 0;
     tl.y = ofGetWindowHeight()/2;
-    tl.width = ofGetWindowWidth()-40;
-    tl.height = 60;
+    tl.width = ofGetWindowWidth();
+    tl.height = 1;
     tl.update();
     
     for(int i=0; i<companies.size(); i++){
@@ -81,8 +70,7 @@ void testApp::update(){
 void testApp::draw(){
     
     
-    tl.draw();
-    
+       
     
     
 //    cam.setPosition(ofVec3f(1,0,5.0));
@@ -112,14 +100,11 @@ void testApp::draw(){
         companies[i]->draw();
     }
     
+    tl.draw();
 
     
     ofSetHexColor(0xDCDCDC);
     
-    for(int i=0; i<companies.size(); i++){
-        ofSetCircleResolution(100);
-        companies[i]->draw();
-    }
     
     ofDrawBitmapStringHighlight(company, ofPoint(titleX, titleY));
     ofSetHexColor(0xEFF3F3);
@@ -159,7 +144,7 @@ void testApp::draw(){
 
 void testApp::renderOnTimeline(heCompany* co){
     vector<Milestone> stories = co->newsItems;
-    tl.milestones.clear();
+    //tl.milestones.clear();
     for(int i=0; i<stories.size(); i++){
         Milestone m = stories[i];
         tl.addMilestone(m);
@@ -308,23 +293,17 @@ void testApp::loadData(string s){
         c->dollarValue = convertToNumber(c->money_raised);
         c->index = companies.size();
 
-        Milestone item;
-        for(int i=0; i< json["milestones"].size(); i++){
-            item.title = json["milestones"][i]["description"].asString();
-            item.year = json["milestones"][i]["stoned_year"].asInt();
-            item.month = json["milestones"][i]["stoned_month"].asInt();
-            item.day = json["milestones"][i]["stoned_day"].asInt();
-            
-            c->newsItems.push_back(item);
-            
-            
-        }
+        
         
         c->fundingRounds.reserve(json["funding_rounds"].size());
         FundingRound r;
         for(int i=0; i<json["funding_rounds"].size(); i++){
             r.sourceDescription = json["funding_rounds"][i]["source_description"].asString();
             r.raisedAmount = json["funding_rounds"][i]["raised_amount"].asInt();
+            r.funded_day = json["funding_rounds"][i]["funded_day"].asInt();
+            r.funded_month = json["funding_rounds"][i]["funded_month"].asInt();
+            r.funded_year = json["funding_rounds"][i]["funded_year"].asInt();
+            
             if(r.raisedAmount> 0){
                 r.raisedAmount = r.raisedAmount/1000;
             }
@@ -332,6 +311,21 @@ void testApp::loadData(string s){
         }
         
         c->setRadiiBasedOnInvestment();
+        c->setXBasedOnTimeline(tl);
+        
+        Milestone item;
+        for(int i=0; i< json["milestones"].size(); i++){
+            item.title = json["milestones"][i]["description"].asString();
+            item.year = json["milestones"][i]["stoned_year"].asInt();
+            item.month = json["milestones"][i]["stoned_month"].asInt();
+            item.day = json["milestones"][i]["stoned_day"].asInt();
+            
+            item.color.setHsb(c->hue, 200, 100);
+            
+            c->newsItems.push_back(item);
+            
+            
+        }
         
         string numEmp = stripQuotes(ofToString(json["number_of_employees"]));
         if (numEmp.find(null, 0) != string::npos) {
@@ -348,10 +342,12 @@ void testApp::loadData(string s){
         companies.push_back(c);
         heCompany* hec = companies[companies.size()-1];
         
-        hec->startAt(max( (float)100.0, ofRandom(ofGetWindowWidth()-200)), max((float)300, ofRandom(ofGetWindowHeight()-200)));
+        //hec->startAt(max( (float)100.0, ofRandom(ofGetWindowWidth()-200)), max((float)300, ofRandom(ofGetWindowHeight()-200)));
         
         ofAddListener(hec->clickedInside , this, &testApp::onClickInsideCompanyCircle);
         setRadiiBasedOnInvestment();
+        
+        renderOnTimeline(c);
         
         
     } else {
