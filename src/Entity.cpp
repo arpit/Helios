@@ -27,7 +27,7 @@ void Entity::setData( vector <float> _data ){
     while (rings.size() < _data.size()){
         rings.push_back(new Ring());
     }
-    for (int j = data.size()-1; j >= 0 ; j--) {
+    for (int j = 0; j < rings.size() ; j++) {
         rings[j]->color.setHsb(
             hue ,
             lerp( ((float)j)/data.size() , 200 , 100 ),
@@ -42,7 +42,7 @@ void Entity::doStack( bool stk ){
     _doStack = stk;
     if(stk){
         float lastValue = 0;
-        for (int j = data.size()-1; j >= 0 ; j--) {
+        for (int j = 0; j < data.size() ; j++) {
 
             rings[j]->_r1 = sqrtf( (lastValue) / PI );
             rings[j]->_r2 = sqrtf( (data[j]+lastValue) / PI );

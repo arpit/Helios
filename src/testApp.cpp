@@ -70,9 +70,6 @@ void testApp::update(){
 void testApp::draw(){
     
     
-       
-    
-    
 //    cam.setPosition(ofVec3f(1,0,5.0));
 //    cam.begin();
 //   
@@ -97,7 +94,15 @@ void testApp::draw(){
     
     
     for(int i=0; i<companies.size(); i++){
-        companies[i]->draw();
+        
+        int ii = companies.size()-i-1;
+        ofColor c0;
+        
+        c0.setHsb(companies[ii]->hue, 200, 100);
+        
+        ofDrawBitmapStringHighlight(companies[ii]->name, 20 , 80 + i * 22 , c0 );
+        
+        companies[ii]->draw();
     }
     
     tl.draw();
@@ -274,6 +279,7 @@ void testApp::loadData(string s){
             return;
         }
         else{
+            company = ""; // if success, clear the textfield
             notifyString = "";
         }
 
@@ -340,6 +346,8 @@ void testApp::loadData(string s){
         //c.startAt(0, 0);
         
         companies.push_back(c);
+       // drawables.push_back(c);
+        
         heCompany* hec = companies[companies.size()-1];
         
         //hec->startAt(max( (float)100.0, ofRandom(ofGetWindowWidth()-200)), max((float)300, ofRandom(ofGetWindowHeight()-200)));
