@@ -68,5 +68,7 @@ class testApp : public ofBaseApp{
     
         Timeline tl;
     
+        void renderOnTimeline(heCompany* co);
+    
 
 };

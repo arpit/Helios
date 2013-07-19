@@ -17,9 +17,9 @@ void drawHeighlightedTextInVerdana(string s, int x, int y){
         
         verdana = new ofTrueTypeFont;
         
-        verdana->loadFont("frabk.ttf", 18, false);
+        verdana->loadFont("frabk.ttf", 14, false);
         
-        verdana->setLineHeight(18);
+        verdana->setLineHeight(14);
         verdana->setLetterSpacing(1.037);
         
         

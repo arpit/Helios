@@ -41,7 +41,7 @@ void testApp::setup(){
     //loadData("google");
     //loadData("comcast");
     
-    tl.begin(1, 1, 2004);
+    tl.begin(1, 1, 2007);
     tl.end(10, 10, 2013);
     
     
@@ -157,14 +157,20 @@ void testApp::draw(){
     
 }
 
+void testApp::renderOnTimeline(heCompany* co){
+    vector<Milestone> stories = co->newsItems;
+    tl.milestones.clear();
+    for(int i=0; i<stories.size(); i++){
+        Milestone m = stories[i];
+        tl.addMilestone(m);
+    }
+}
+
 //--------------------------------------------------------------
 void testApp::keyPressed(int key){
     if (glutGetModifiers() ==  GLUT_ACTIVE_SHIFT) {
         if(strncmp((char*)&key, "M", 1)==0){
-            vector<Milestone> stories = companies[0]->newsItems;
-            for(int i=0; i<stories.size(); i++){
-                tl.addMilestone(stories[i]);
-            }
+            renderOnTimeline(companies[companies.size()-1]);
         }
         
         if(strncmp((char*)&key, "D", 1)==0){
