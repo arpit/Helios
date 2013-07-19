@@ -295,11 +295,11 @@ void testApp::loadData(string s){
         heCompany* c = new heCompany();
         
         float rand = ofRandom(5000, 10000);
-        vector<float> d (10,rand);
-        c->setData(d);
+//        vector<float> d (10,rand);
+//        c->setData(d);
         vector<float> xs (10,0);
 
-        c->setData(d); // vector of values
+//        c->setData(d); // vector of values
         c->setXs(xs);  // vector of x positions (global)
         c->doStack(true); // stack rings or not
 
@@ -325,9 +325,13 @@ void testApp::loadData(string s){
         for(int i=0; i<json["funding_rounds"].size(); i++){
             r.sourceDescription = json["funding_rounds"][i]["source_description"].asString();
             r.raisedAmount = json["funding_rounds"][i]["raised_amount"].asInt();
+            if(r.raisedAmount> 0){
+                r.raisedAmount = r.raisedAmount/1000;
+            }
             c->fundingRounds.push_back(r);
         }
         
+        c->setRadiiBasedOnInvestment();
         
         string numEmp = stripQuotes(ofToString(json["number_of_employees"]));
         if (numEmp.find(null, 0) != string::npos) {

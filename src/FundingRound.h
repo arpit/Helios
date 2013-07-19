@@ -15,7 +15,7 @@
 class FundingRound{
 public:
     string sourceDescription;
-    string raisedAmount;
+    int raisedAmount;
 };
 
 #endif /* defined(__StartupsViz__FundingRound__) */

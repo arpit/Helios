@@ -32,6 +32,8 @@ public:
     
     bool isSelected = false;
     
+    vector<float> info;
+    
     
     float dollarValue;
     
@@ -55,6 +57,8 @@ public:
    
     vector<Milestone> newsItems;
     vector<FundingRound> fundingRounds;
+    
+    void setRadiiBasedOnInvestment();
     
     
 };

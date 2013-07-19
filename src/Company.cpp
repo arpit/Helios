@@ -64,6 +64,13 @@ void heCompany::drawSphere(int color){
 //}
 
 
+void heCompany::setRadiiBasedOnInvestment(){
+    for (int i=0; i<fundingRounds.size(); i++) {
+        info.push_back((float)fundingRounds[i].raisedAmount);
+    }
+    setData(info);
+}
+
 void heCompany::mouseMoved(ofMouseEventArgs & args){}
 void heCompany::mouseDragged(ofMouseEventArgs & args){}
 void heCompany::mousePressed(ofMouseEventArgs & args){}
