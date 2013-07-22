@@ -80,11 +80,26 @@ void Timeline::draw(){
         ofSetColor(ofColor::white);
         ofCircle(xpos, y, 5);
         
+        
+    }
+    for(int i=0; i<markers.size(); i++){
+        int x = getXBasedOn(markers[i].day, markers[i].month, markers[i].year);
+        ofDrawBitmapString(ofToString(markers[i].year), x, y+14);
     }
 }
 
 void Timeline::addMilestone(Milestone ml){
     milestones.push_back(ml);
+}
+
+void Timeline::addMarker(int day, int month, int year){
+    Marker m;
+    m.year = year;
+    m.month = month;
+    m.day = day;
+    
+    markers.push_back(m);
+    
 }
 
 Timeline::~Timeline(){

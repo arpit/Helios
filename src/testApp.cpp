@@ -44,9 +44,15 @@ void testApp::setup(){
     tl.begin(1, 1, 2007);
     tl.end(10, 10, 2013);
     
+    tl.addMarker(1, 1, 2008);
+    tl.addMarker(1, 1, 2009);
+    tl.addMarker(1, 1, 2010);
+    tl.addMarker(1, 1, 2011);
+    tl.addMarker(1, 1, 2012);
+    tl.addMarker(1, 1, 2013);
 
     tl.setup();
-    
+        
     
 }
 
@@ -167,8 +173,8 @@ void testApp::keyPressed(int key){
         
         if(key == 4){
             // clear all
-            for(int i=0; i<companies.size(); i++){
-                deleteCompany(companies[i]);
+            while(companies.size()>0){
+                deleteCompany(companies[0]);
             }
             tl.milestones.clear();
         }

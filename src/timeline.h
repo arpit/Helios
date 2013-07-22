@@ -15,9 +15,17 @@
 #include "MileStone.h"
 #include "heTextUtils.h"
 
+
+
 class Timeline{
 
 public:
+    
+    struct Marker{
+        int day;
+        int month;
+        int year;
+    };
 
     int beginDay;
     int beginMonth;
@@ -31,6 +39,7 @@ public:
     int height;
     
     vector<Milestone> milestones;
+    vector<Marker> markers;
 
     int endDay, endMonth, endYear;
     
@@ -43,6 +52,7 @@ public:
     void update();
     void draw();
     void addMilestone(Milestone ml);
+    void addMarker(int day, int month, int year);
     float getXBasedOn(int day, int month, int year);
     
     

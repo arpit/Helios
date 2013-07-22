@@ -50,7 +50,7 @@ void Entity::doStack( bool stk ){
 
             rings[j]->_r1 = sqrtf( (lastValue) / PI );
             rings[j]->_r2 = sqrtf( (data[j]+lastValue) / PI );
-            rings[j]->_strength = lerp( ((float)j)/data.size() , .1 , .09 );
+            rings[j]->_strength = lerp( ((float)j)/data.size() , .1 , .05 );
 
 
             lastValue += data[j];
@@ -59,7 +59,7 @@ void Entity::doStack( bool stk ){
         for (int j = 0; j < data.size() ; j++) {
             rings[j]->_r1 = 0;
             rings[j]->_r2 = sqrtf( data[j] / PI );
-            rings[j]->_strength = lerp( ((float)j)/data.size() , .1 , .09 );
+            rings[j]->_strength = lerp( ((float)j)/data.size() , .1 , .05 );
         }
     }
 }
